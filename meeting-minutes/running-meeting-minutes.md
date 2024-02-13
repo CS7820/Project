@@ -1,4 +1,4 @@
-# [Optional Title]
+# Running Meeting Minutes
 ## Date: [mm/dd/yy]
 
 ### Attending
