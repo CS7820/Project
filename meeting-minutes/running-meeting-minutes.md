@@ -1,4 +1,23 @@
 # Running Meeting Minutes
+## Date: [02/20/24]
+
+### Attending
+* Brandon Dave
+* Calvin Greenewald
+* Stacie Severyn
+
+### Agenda
+* Discussion of findings from annotated biblio
+
+### Action
+* TODO
+    * Assigned to:
+    * Due by:
+    
+
+### Additional Notes
+* Example text
+
 ## Date: 02/13/24
 
 ### Attending
