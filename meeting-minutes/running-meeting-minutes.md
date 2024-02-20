@@ -56,6 +56,8 @@
     
 
 ### Additional Notes
+* Public KBs can be found from one of the appendices of Brandon's paper when we get that far
+* The actual output of KB falsified facts are not necessarily the purpose, but analyzing the performance changes in KGs after training on AA data points
 * Use found paper references for hints on connecting relevance
 * Narrative: 
     * From Cogan email:
