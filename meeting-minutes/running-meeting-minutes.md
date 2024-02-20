@@ -7,16 +7,21 @@
 * Stacie Severyn
 
 ### Agenda
+* Next meeting 1-2pm Thursday
 * Discussion of findings from annotated biblio
 
 ### Action
-* TODO
-    * Assigned to:
-    * Due by:
+* During Lit Review, figure out AA methodolgy
+    * Assigned to: Everyone
+    * Due by: 2/22
+
+* Continue lit review
+    * Assigned to: Everyone
+    * Due by: 2/23
     
 
 ### Additional Notes
-* Example text
+* Plan around Spring Break, maybe virtual meeting looping in faculty members on overall total ideas gathered
 
 ## Date: 02/13/24
 
