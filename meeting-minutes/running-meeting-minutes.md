@@ -1,5 +1,5 @@
 # Running Meeting Minutes
-## Date: [02/20/24]
+## Date: 02/20/24
 
 ### Attending
 * Brandon Dave
