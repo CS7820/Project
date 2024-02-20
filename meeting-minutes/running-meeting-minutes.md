@@ -1,4 +1,20 @@
 # Running Meeting Minutes
+## Date: 02/22/24
+
+### Attending
+* Brandon Dave
+* Calvin Greenewald
+* Stacie Severyn
+
+### Agenda
+* 
+
+### Action
+*
+
+### Additional Notes
+* 
+
 ## Date: 02/20/24
 
 ### Attending
@@ -11,7 +27,7 @@
 * Discussion of findings from annotated biblio
 
 ### Action
-* During Lit Review, figure out AA methodolgy
+* During Lit Review, figure out AA methodologies
     * Assigned to: Everyone
     * Due by: 2/22
 
@@ -19,8 +35,8 @@
     * Assigned to: Everyone
     * Due by: 2/23
     
-
 ### Additional Notes
+* Using LaTeX for any paper writing
 * Plan around Spring Break, maybe virtual meeting looping in faculty members on overall total ideas gathered
 
 ## Date: 02/13/24
