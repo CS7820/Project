@@ -1,4 +1,23 @@
 # Running Meeting Minutes
+## Date: 3/6/24
+
+### Attending
+* Brandon Dave
+* Calvin Greenewald
+* Stacie Severyn
+
+### Agenda
+* Walls/Restrictions/Knowledge Gaps
+
+### Action
+* TODO
+    * Assigned to:
+    * Due by:
+    
+
+### Additional Notes
+* Example text
+
 ## Date: 02/22/24
 
 ### Attending
@@ -7,13 +26,23 @@
 * Stacie Severyn
 
 ### Agenda
-* 
+* Discussion of problem statement
+* Solidify yes/no with going with Cogan and Lingwei's Preliminary research pushing for NeSy 2024 deadline (April 5, 12)
+* Planning on Spring Break: Cogan out of office Sunday-to-Sunday, but remotely reachable
+
 
 ### Action
-*
+* Research knowledge gaps
+    * Assigned to: Calvin, Stacie
+    * Due by: 3/6
+* Coordinate a meeting with Cogan and Lingwei post-spring break to present concrete ideas
+    * Assigned to: Everyone
+    * Due by: 3/5
 
 ### Additional Notes
-* 
+* Datasets have been provided on Discord
+* Next meeting: 3/6
+* 3pm Lingwei <> Calvin meeting will solidify preliminary research decision
 
 ## Date: 02/20/24
 
