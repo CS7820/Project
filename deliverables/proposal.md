@@ -1,7 +1,7 @@
-# Attacking Knowledge Graph with Falsified Triples
+# Attacking Litigation Knowledge Graph (SCALES OKN) with Falsified Triples
 
 ## Administrivia
-* **Team Name**:
+* **Super Duper Group group**:
 
 * **Team Members**:
     * Brandon Dave
@@ -9,11 +9,9 @@
     * Stacie Severyn
 
 # Problem Statement
-Cogan: What is the problem? Provide brief background of the problem and generally motivate. Generally broken down
-- Problem Statement
-    - Research Question(s)
-        - Falsifiable Hypothes[is|es]
+Will adversarial attacks on the SCALES KG impact an individual's outcome?
 
+Research Question in itself:  What is the threshold of affected facts to cause damage to a KG's performance?
 
 # Background and Relevance
 ## Ontology and LLM
@@ -22,29 +20,27 @@ Ontologies provide data with context providing insight into knowledge which has 
 ## Adversarial and Poisoning Attacks
 
 ### Cogan: Why NeSy AI?
-Cogan: Why should this problem be solved with a neurosymbolic approach. Benefits, drawbacks.
+The SCALES OKN exists as a knowledge base (knowledge graph). This is publicly available data that can be attacked via adding or removing facts from the knowledge base which directly affects KGE performance for predictive tasks in KG Completion (KGC).
+
+The research is focused on the impacts of these attacks.
 
 ### Cogan: Intellectual Merit
-Cogan: How does this project extend the state of the art?
+Research into KGE and adversarial attacks on KGs.
 
-### Cogan: Broader Impacts
-Cogan: Why is solving this problem broadly impactful to science and/or society.
+### Broader Impacts
+Societal:  KG attacks can affect the outcome of an individual's verdict of their case.
 
 ## Proposed Methodology
-The steps taken to address the problem statement.
+We will develop with the CRIAGE framework which provides an analysis for optimal candidacy list of facts to be attacked on the SCALES OKN.
 
-# Methodology
-We will investigate/develop...
-
-by implementing a poisoning attack on data used by LLM.
 
 # Expected Results and Significance
+We expect the non-toy data set (SCALES) to reflect equal or better damages (a decreased performance of KGE) to a KG.
+
 Our proposed research expects to:
 1. a
 2. b
 3. c
-
-Cogan: What are the "back of the envelope" results?
 
 # References
 [1] Schad, J. Bridging the gap: Integrating knowledge graphs and large language models, Oct 2023.

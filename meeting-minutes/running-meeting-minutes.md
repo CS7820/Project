@@ -5,18 +5,33 @@
 * Brandon Dave
 * Calvin Greenewald
 * Stacie Severyn
+* Cogan Shimizu
+* Lingwei Chen
 
 ### Agenda
-* Walls/Restrictions/Knowledge Gaps
+* Presenting current status of CS7820 Project idea wrt SCALES OKN
 
 ### Action
-* TODO
-    * Assigned to:
-    * Due by:
-    
+*     
 
 ### Additional Notes
-* Example text
+* 
+
+## Date: 3/5/24
+
+### Attending
+* Brandon Dave
+* Calvin Greenewald
+* Stacie Severyn
+
+### Agenda
+* Formulating Problem Statement in preparation for 3/6/24 meeting with Advisors
+
+### Action
+*     
+
+### Additional Notes
+* 
 
 ## Date: 02/22/24
 
