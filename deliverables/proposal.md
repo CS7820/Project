@@ -9,9 +9,9 @@
     * Stacie Severyn
 
 # Problem Statement
-When trained with Knowledge Graphs (KG), Artificial Intelligence (AI) reports higher accuracy while reducing hallucinogenic effects due to the added semantic understanding to the data. As with other machine learning models, the knowledge graph for a KG-powered AI acts as another source of vulnerability implementing adversarial and poisoning attacks on the dataset, which in this case act as KG facts (or triplets).
+When trained with Knowledge Graphs (KG), Artificial Intelligence (AI) reports higher accuracy while reducing hallucinogenic effects due to the added semantic understanding to the data<sup>[1]</sup>. As with other machine learning models, the knowledge graph for a KG-powered AI acts as another source of vulnerability implementing adversarial and poisoning attacks on the dataset, which in this case act as KG facts (or triplets).
 
-The SCALES-OKN knowledge graph provides a tool to the public in understanding the federal judiciary inner-workings, which as a whole can be considered as constructed from the written opinions of less than 10% of cases, as written on their home page. As a knowledge tool to the public, the organization's next goal is to provide an AI powered with their litigation KG to better serve the public in dissolving the mystery of this particular domain.
+The SCALES-OKN knowledge graph provides a tool to the public in understanding the federal judiciary inner-workings, which as a whole can be considered as constructed from the written opinions of less than 10% of cases, as written on their home page<sup>[2]</sup>. As a knowledge tool to the public, the organization's next goal is to provide an AI powered with their litigation KG to better serve the public in dissolving the mystery of this particular domain.
 
 In our proposed research, we want to explore adversarial attack impact on a non-toy dataset, which if realistically implemented would impose real-world consequences to the verdict ruling for individuals. 
 
@@ -19,7 +19,7 @@ We expect an attacked KG, that is to say one that has had falsified facts added 
 
 # Background and Relevance
 ## Ontology and LLM
-Ontologies provide data with context providing insight into knowledge which has been proven to complement LLM and their generative tasks in improving accuracy and reducing hallucinative effects<sup>[1]</sup>.
+Ontologies provide data with context providing insight into knowledge which has been proven to complement LLM and their generative tasks in improving accuracy and reducing hallucinative effects.
 
 ## Adversarial and Poisoning Attacks
 ### Proposed Methodology and Expected Results
@@ -43,3 +43,4 @@ Societal:  KG attacks can affect the outcome of an individual's verdict of their
 
 # References
 [1] Schad, J. Bridging the gap: Integrating knowledge graphs and large language models, Oct 2023.
+[2] https://scales-okn.org/. Accessed on 5 Mar. 2024.
