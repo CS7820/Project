@@ -19,10 +19,11 @@ We expect an attacked KG, that is to say one that has had falsified facts added 
 
 # Background and Relevance
 ## Ontology and LLM
-Ontologies provide data with context providing insight into knowledge which has been proven to complement LLM and their generative tasks in improving accuracy and reducing hallucinative effects.
 
 ## Adversarial and Poisoning Attacks
-### Proposed Methodology and Expected Results
+
+
+# Proposed Methodology and Expected Results
 To explore a KG's query performance, we will implement the CRIAGE framework which provides both an analysis in optimal candidates as a list of facts which can be attacked with the highest likelihood of impacting the KG's ability to query. A set of competency questions (CQ), which can be inspired by SCALE's Satyrn Notebooks, will be prompted by both KGs with the expectation that the corrupted KG corrupted by adversarial attack results in both omission of facts that would be true or added false claims.
 
 To explore a KG's overall performance in Knowledge Graph Completion (KGC) tasks, enabled by Knowledge Graph Embedding (KGE), we will train KGE models with both the provided SCALES KG, as a base, and an attacked SCALES KG, as a corrupted KG. We expect both graphs to still maintain the functionality for link prediction, thus inferring facts in order to complete a KG; however, we hope to observe the evaluation upon a targetted fact that had been attacked to have differing results, specifically being more difficult to find within a top-k ranking system. 
