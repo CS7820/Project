@@ -6,16 +6,24 @@
 * Calvin Greenewald
 * Stacie Severyn
 * Cogan Shimizu
+
+### Regrets
 * Lingwei Chen
 
 ### Agenda
 * Presenting current status of CS7820 Project idea wrt SCALES OKN
+* Receive feedback from Advisors on next-steps
 
 ### Action
-*     
+* Update Lingwei; CC Everyone
+Assigned to: Calvin
+
+* Review SCALES data and come up with RQ relative to data
+Assigned to: Everyone
 
 ### Additional Notes
-* 
+* Demographic adversarial impacted by a system that would recommend a verdict/sentencing
+    * Federal:  Recurrence rarely happens
 
 ## Date: 3/5/24
 
