@@ -43,5 +43,5 @@ Societal:  KG attacks can affect the outcome of an individual's verdict of their
 
 
 # References
-[1] Schad, J. Bridging the gap: Integrating knowledge graphs and large language models, Oct 2023.
-[2] https://scales-okn.org/. Accessed on 5 Mar. 2024.
+* [1] Schad, J. Bridging the gap: Integrating knowledge graphs and large language models, Oct 2023.
+* [2] https://scales-okn.org/. Accessed on 5 Mar. 2024.
