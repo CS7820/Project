@@ -1,4 +1,24 @@
 # Running Meeting Minutes
+## Date: 3/7/24
+
+### Attending
+* Brandon Dave
+* Calvin Greenewald
+* Stacie Severyn
+* Cogan Shimizu
+
+### Agenda
+* Get all members of the same page with regards to research ideas
+* Present project scope and ideas to Cogan
+
+### Actions
+* Look into Criage implementation
+  Assigned to: Everyone 
+
+### Notes 
+* Create misinformaiton on a subset of data from SCALES, and then determine if the
+  nature of the misinformation carries over to the original SCALES as well. 
+
 ## Date: 3/6/24
 
 ### Attending
