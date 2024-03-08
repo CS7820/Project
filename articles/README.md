@@ -6,6 +6,22 @@ Author(s)
 Annotated Notes/Summary  
 * Problem Statement/Proposed Solution/Future Work
 
+## [Quantifying and Defending against Privacy Threats on Federated Knowledge Graph Embedding](https://arxiv.org/pdf/2304.02932.pdf)
+* Three attacks proposed to infer the existence of specific KG triples held by victim clients in federated knowledge graph embedding 
+* Attack settings involve server and client adversaries with different background information and capabilities
+* Attack types include server-initiated inference attack, client-initiated passive inference attack, and client-initiated active inference attack.
+* Attack:
+   * Server-initiate Inference Attack: Involves calculating entity embeddings, inferring relations, and inferring specific triple types using an auxiliary dataset
+   * Client-initiate Passive Inference Attack: Adversary follows standard FKGE protocol but identifies target entity embeddings and approximates relation embeddings to infer triples
+   * Client-initiate Active Inference Attack: Malicious client modifies local embeddings to gain better attack capability by reversing entity embeddings and inferring triple existence
+
+* Defense: 
+   * Baseline defense: involves applying differentially private stochastic gradient descent to FKGE
+   * Advanced defense: addresses challenges of model size and sparse gradient property of FKGE improving utility
+   * Adaptive privacy budget allocation dynamically adjusts noise scale based on validation accuracy during training
+
+* The defense can defend against inference attacks 
+
 ## [Adversarial Explanations for Knowledge Graph Embeddings](https://www.ijcai.org/proceedings/2022/0391.pdf)
 Patrick Betz, Christian Meilicke, Heiner Stuckenschmidt
 * Find a logical exlanation for KGE model predections
