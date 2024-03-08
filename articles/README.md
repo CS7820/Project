@@ -6,6 +6,19 @@ Author(s)
 Annotated Notes/Summary  
 * Problem Statement/Proposed Solution/Future Work
 
+## [Adversarial Explanations for Knowledge Graph Embeddings](https://www.ijcai.org/proceedings/2022/0391.pdf)
+Patrick Betz, Christian Meilicke, Heiner Stuckenschmidt
+* Find a logical exlanation for KGE model predections
+    * apply rule learning approach to learn a logical theory that describes general regulations
+    * abductive reasoning to find the triple that together with the theory is the best explanation for the prediction
+    * the triple is used as the triple that is attacked
+- Black box method used for adversarial attacks
+- Abductive reasoning: find an explanation for an observation given a theory
+- Either delete or add triples for the attack
+- Delete: supress explanation by deleteing the triple
+- Addition: perturb the true explanation for the target to a senseless statement about one of the entities in the target 
+
+
 ## [Poisoning Knowledge Graph Embeddings via Relation Inference Patterns](https://arxiv.org/abs/2111.06345)
 Peru Bhardwaj, John Kelleher, Luca Costabello, Declan O'Sullivan
 
