@@ -105,3 +105,36 @@ The authors conclude that CRIAGE better performs on multiplicative scoring funct
 Yashrajsinh Chudasama 
 
 I am the annotated bibliography.
+
+
+## [Stealthy Targeted Data Poisoning Attack on Knowledge Graphs](https://ieeexplore.ieee.org/document/9458733)
+Prithu Banerjee, Lingyang Chu, Yong Zhang, Laks V.S. Lakshmanan, Lanjun Wang
+
+Is it possible to conduct a stealthy targeted data poisoning attack, while keeping the exposure risk low?
+
+Major contributions of the paper:
+    Introduce the novel problem of finding targeted knowledge graph attack under an exposure risk constraint. 
+         - Attack the KG by means of perturbations where the goal is to maximize the manipulation of the target fact's plausibility while keeping the risk of exposure under a given budget.
+    Develop a principled framework, RATA(Risk called Aware Targetted Attacker), for attacks, based on hierarchical deep Q-learning, by making use of the natural match between reinforcement learning and MDP.           The attack approach succeeds in exploiting the non-linear structure of the KG efficiently. RATA learns to use low-risk perturbations without compromising on the performances.
+    Our experiments on large real world benchmark KG datasets, demonstrate that RATA achieves good attack performance, while staying within a given exposure risk budget. The experiments show that RATA                 achieves state-of-the-art performance even while using a fractrion of the risk.
+
+
+## [MaSS: Model-agnostic, Semantic and Stealthy Data Poisoning Attack on Knowledge Graph Embedding ](https://arxiv.org/abs/2209.03303)
+Xiaoyu You, Mi Zhang, Fuli Feng, Beina Sheng, Xudong Pan, Daizong Ding, Min Yang
+
+Despite the benefits of public data collection, this mechanism opens up a new attack window for malicious users. Attackers may submit poisoned triplets to manipulate the KG, leading to biased KGEs and wrong decisions of the downstream applications. Through extensive evaluation of benchmark datasets and 6 typical knowledge graph embedding models as the victims, the authors validate the effectiveness in terms of attack success rate(ASR) under opaque-box setting and stealthiness.
+
+The research presented aims to launch a data poisoning attack against KGE models that satisfies the following requirements:
+    - Opaque-box Setting - The effectiveness of the proposed data poisoning attack should be promised without the full knowledge of KGE models.
+    - Semantic Constraints - The inserted triplets should contain correct semantical information to evade the error detection methods of KG.
+    - Stealthiness - The infected model should maintain good performance of clean triplets, preventing the undergoing attack from exposing by clean performance degradation.
+
+Develop a framework that satisfies the constraints above.
+    Model-Agnostic Semantic and Stealthy (MaSS)
+        - insert indicative paths to mislead the target KGE model - inserting indicative paths composed of triplets to make the model predict the fact. The motivation behind the such design is that                    indicative paths on KGs represent how one entity is related to another semantically by some explicit relations and can be learned by various KGE models with different architectures. 
+        
+Evaluate the proposed attack on three benchmark datasets, attacking six state-of-the-art KGE models. The experiment is designed to answer the following research questions:
+    Can MaSS successfully attack in opaque-box settings?
+    Can MaSS conduct a stealthy attack?
+    Do the injected triplets of MaSS contain semantical information?
+    How do settings influence performance and stealthiness?
