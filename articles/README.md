@@ -38,7 +38,11 @@ Patrick Betz, Christian Meilicke, Heiner Stuckenschmidt
 ## [Poisoning Knowledge Graph Embeddings via Relation Inference Patterns](https://arxiv.org/abs/2111.06345)
 Peru Bhardwaj, John Kelleher, Luca Costabello, Declan O'Sullivan
 
-I am the annotated bibliography.
+In this work, the authors propose to exploit the inductive abilities of KGE models to craft poisoned examples against the model. The inductive abilities are captured through the relationship patterns including symmetry, inversion, and composition in the KG. These are referred to as inference patterns. The authors propose to focus on link prediction using KGE models and consider the adversarial goal of degrading the predicted rank of target missing facts. 
+
+Evaluate four models with varying inductive abilities - DistMult, ComplEx, ConvE, and TransE on two publicly available benchmark datasets for link prediction - WN18RR and FB15k-237.
+
+The proposed adversarial attacks outperform the random baselines and the state-of-the-art poisoning attacks for all KGE models on both datasets. The attacks based on symmetry inference pattern perform the best across all model dataset combinations.
 
 
 ## [Adversarial Attacks on Knowledge Graph Embeddings via Instance Attribution Methods](https://arxiv.org/abs/2111.03120)
