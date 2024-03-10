@@ -40,7 +40,7 @@ Peru Bhardwaj, John Kelleher, Luca Costabello, Declan O'Sullivan
 
 In this work, the authors propose to exploit the inductive abilities of KGE models to craft poisoned examples against the model. The inductive abilities are captured through the relationship patterns including symmetry, inversion, and composition in the KG. These are referred to as inference patterns. The authors propose to focus on link prediction using KGE models and consider the adversarial goal of degrading the predicted rank of target missing facts. 
 
-Evaluate four models with varying inductive abilities - DistMult, ComplEx, ConvE, and TransE on two publicly available benchmark datasets for link prediction - WN18RR and FB15k-237.
+DATA - Evaluate four models with varying inductive abilities - DistMult, ComplEx, ConvE, and TransE on two publicly available benchmark datasets for link prediction - WN18RR and FB15k-237.
 
 The proposed adversarial attacks outperform the random baselines and the state-of-the-art poisoning attacks for all KGE models on both datasets. The attacks based on symmetry inference pattern perform the best across all model dataset combinations.
 
@@ -48,7 +48,22 @@ The proposed adversarial attacks outperform the random baselines and the state-o
 ## [Adversarial Attacks on Knowledge Graph Embeddings via Instance Attribution Methods](https://arxiv.org/abs/2111.03120)
 Peru Bhardwaj, John Kelleher, Luca Costabello, Declan O'Sullivan
 
-I am the annotated bibliography.
+The authors study the security vulnerabilities of KGE models through data poisoning attacks.
+    - To select adversarial deletions, the authors propose to use the model-agnostic instance attribution methods from Interpretable Machine Learning.
+    - A heuristic method is proposed to replace one of the two entities in each influential triple to generate adversarial additions.
+
+Instance Attribution Methods:
+    - Instance Similarity - Estimate the influence of training triple x on the prediction of target triple z based ont he similarity of their feature representations.
+    - Gradient Similartiy - Gradient similarity metrics compute similarity between the gradients due to target triple z and the gradients due to training triple x. The intuition is to assign higher influence         to training triples that have similar effect on the model's parameters as the target triple; and are therefore likely to impact the prediction on target triple. 
+    - Influence Functions - To estimate the effect of a training point on a model's predictions, it first approximates the effect of removing the training point on the learned model parameters.
+
+  Adversarial Additions: 
+    - Using the Instance Attribution Methods, the training triple x is selected that is most influential to the prediction of z. An adversarial addition can be created by replacing the initial x with a               dissimilar entity x'. The replacing triple will have a different object. The influence of the influential triple will be reduced.
+
+The degradation in predictive performance is more significant on WN18RR than on FB15k-237. This is likely due to the sparser graph structure of WN18RR. The model learns its predictions from few influential triples in WN 18RR.
+
+DATA - Four KGE models - DistMult, ComplEx, ConvE, and TransE on two benchmark datasets - WN18RR and FB15k-237
+
 
 ## [Evaluation Framework for Poisoning Attacks on Knowledge Graph Embeddings](https://link.springer.com/chapter/10.1007/978-3-031-44693-1_15)
 Dong Zhu, Yao Lin, Le Wang, Yushun Xie, Jie Jiang & Zhaoquan Gu 
