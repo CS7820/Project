@@ -138,3 +138,15 @@ Evaluate the proposed attack on three benchmark datasets, attacking six state-of
     Can MaSS conduct a stealthy attack?
     Do the injected triplets of MaSS contain semantical information?
     How do settings influence performance and stealthiness?
+
+
+
+
+## [Poisoning attacks against knowledge graph-based recommendation systems using deep reinforcement learning](https://link.springer.com/article/10.1007/s00521-021-06573-8)
+Zih-Wun Wu, Chiao-Ting Chen, Szu-Hao Huang
+
+Introducing KGs into recommendation systems can improve recommendation accuracy. However, KGs are usually based on third-party data that may be manipulated by malicious individuals. In this study, we developed a poisoning attack strategy applied on a KG-based recommendation system to analyze the influence of fake links.
+
+This study aims to attack a KG-based recommendation system using reinforcement learning approaches(Q-learning). Attackers influence the KG by adding or forging facts. During our research, we discovered that
+the number of possible attack combinations was excessively high, and each attack combination must interact with the recommendation system under a poisoning attack setting. The correct attack effect of all combinations could not be obtained. 
+
