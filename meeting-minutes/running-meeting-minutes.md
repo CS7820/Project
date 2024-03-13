@@ -1,6 +1,24 @@
 # Running Meeting Minutes
-## Date: 3/7/24
+## Date: 3/12/24
+### Attending
+* Brandon Dave
+* Calvin Greenewald
+* Stacie Severyn
 
+### Agenda
+* 
+
+### Actions
+* CQ by Wednesday
+Assigned to: Everyone 
+* Begin sub-graph materialization 
+Assigned to: Everyone
+
+### Notes 
+* Next meeting is 3/14
+* Ask Cogan about Hosting Data on GH
+
+## Date: 3/7/24
 ### Attending
 * Brandon Dave
 * Calvin Greenewald
