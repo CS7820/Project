@@ -9,7 +9,7 @@
     * Stacie Severyn
 
 # Problem Statement
-When trained with Knowledge Graphs (KG), Artificial Intelligence (AI) reports higher accuracy while reducing hallucinogenic effects due to the added semantic understanding to the data<sup>[1]</sup>. As with other machine learning models, the knowledge graph for a KG-powered AI acts as another source of vulnerability implementing adversarial and poisoning attacks on the dataset, which in this case act as KG facts (or triplets).
+When trained with Knowledge Graphs (KG), Artificial Intelligence (AI) reports higher accuracy while reducing hallucinogenic effects due to the added semantic understanding to the data<sup>[1]</sup>. As with other machine learning models, the knowledge graph for a KG-powered AI acts as another source of vulnerability, open to adversarial and poisoning attacks targeting the data source, which in this case act as KG facts (or triplets).
 
 The SCALES-OKN knowledge graph provides a tool to the public in understanding the federal judiciary inner-workings, which as a whole can be considered as constructed from the written opinions of less than 10% of cases, as written on their home page<sup>[2]</sup>. As a knowledge tool to the public, the organization's next goal is to provide an AI powered with their litigation KG to better serve the public in dissolving the mystery of this particular domain.
 
@@ -57,6 +57,13 @@ SELECT ?Agent ?Role ?Name ?Charge ?Content WHERE {
   Filter(?Role = "Assigned Judge")
 }   
 ```
+3) What circuit was Case [Insert]?
+```sql
+
+```
+
+4) 
+
 
 To explore a KG's overall performance in Knowledge Graph Completion (KGC) tasks, enabled by Knowledge Graph Embedding (KGE), we will train KGE models with both the provided SCALES KG, as a base, and an attacked SCALES KG, as a corrupted KG. We expect both graphs to still maintain the functionality for link prediction, thus inferring facts in order to complete a KG; however, we hope to observe the evaluation upon a targetted fact that had been attacked to have differing results, specifically being more difficult to find within a top-k ranking system. 
 

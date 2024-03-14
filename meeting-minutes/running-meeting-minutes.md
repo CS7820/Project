@@ -6,7 +6,33 @@
 * Stacie Severyn
 
 ### Agenda
-* 
+* Read the current state of the proposal
+* Discussed meeting during "no class" periods
+* What to bring up with Cogan come Tuesday, 3/19
+
+### Actions
+* Sub-graph Diagramming (yEd) 
+Assigned to: Stacie
+Due by: Monday, 3/18
+* Sub-graph materialization using Python rdflib
+Assigned to: Calvin and Brandon
+Due by: Thursday, 3/21
+* Proposal modifications
+Assigned to: Everyone
+Due by: Friday, 3/22
+
+### Notes 
+* Next meeting is 3/14
+* Ask Cogan about Hosting Data on GH
+
+## Date: 3/12/24
+### Attending
+* Brandon Dave
+* Calvin Greenewald
+* Stacie Severyn
+
+### Agenda
+* Nothing concrete - open discussion
 
 ### Actions
 * CQ by Wednesday
@@ -30,7 +56,7 @@ Assigned to: Everyone
 * Present project scope and ideas to Cogan
 
 ### Actions
-* Look into Criage implementation
+* Look into CRIAGE implementation
   Assigned to: Everyone 
 
 ### Notes 
