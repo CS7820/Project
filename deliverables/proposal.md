@@ -8,6 +8,35 @@
     * Calvin Greenewald
     * Stacie Severyn
 
+#  Problem Statement
+KG are an established tool to represent structured data.  
+
+The Cooke Dataset (properly label/name) represents information pertaining to court cases around Cooke County of Illlnois. If a KG were to be developed with this dataset, a user may query a judge for an expected charge. 
+
+KGE is used for link prediction.
+
+Embedding the Cooke Dataset KG allows for link prediction.
+
+We ask the following RQ:
+1) At what rate of perturbed data does the reliability of the knowledge graph in representing Case, Court, Agent, and Charge relationships start to diminish?
+
+We hypothesize that we some judges may sentence the same charge at different severities.
+
+# Justification
+##  Why NeSy AI
+Utilizing KGE to perform link prediction
+
+## Intellectual Merit
+Utilizing Real Data vs Toy Data (as seen in Declan's papers)
+
+## Broader Impacts:
+User querying on judge for sentence biasness
+
+
+
+
+
+=======
 # Problem Statement
 When trained with Knowledge Graphs (KG), Artificial Intelligence (AI) reports higher accuracy while reducing hallucinogenic effects due to the added semantic understanding to the data[1]. As with other machine learning models, the knowledge graph for a KG-powered AI acts as another source of vulnerability, open to adversarial and poisoning attacks targeting the data source, which in this case act as KG facts (or triplets).
 
@@ -20,7 +49,6 @@ In our proposed research, we want to explore adversarial attack impact on a non-
 
 2) Can the results of the charge be specifically changed to another type of charge. 
 
-3) At what rate of manipulated data does the reliability of the knowledge graph in representing Case, Court, Agent, and Charge relationships start to diminish?
 
 We expect an attacked KG, that is to say one that has had falsified facts added and true facts removed, will begin answering queries with false claims - thus invalidating the knowlege graph's performance. An interesting angle for this research is to also obtain an understanding of a threshold of applied adversarial attacks in order to cause the decreased performance on the knowledge graph.
 
