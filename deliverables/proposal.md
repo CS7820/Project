@@ -25,7 +25,7 @@ In exploring RQ 2, we hypothesize that a corrupted KG after a targeted adversari
 
 # Justification
 ##  Why NeSy AI
-Utilizing KGE to perform link prediction
+We are using NEsy AI to utilize KGE to perform link prediction. NeSy AI offers a promising approach for addressing the challenges associated with KGE and link prediction tasks, particularly in domains like court data where the reliability and robustness of AI systems are most important. NeSy AI combines symbolic representations with subsymbolic representations learned by neural networks. This combination allows for more robust handling of structured data while also utilizing the power of neural networks to capture the  patterns and semantics. The combination of reasoning and symbolic knowledge better equip the model to combat adversarial attacks. This will make it interesting to attack the model in an attempt to falsify predicted links, as it is natuarlly more difficult to manipulate the data. 
 
 ## Intellectual Merit
 Utilizing Real Data vs Toy Data (as seen in Declan's papers)
