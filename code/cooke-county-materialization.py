@@ -22,7 +22,7 @@ csv_columns = [
 name_space = "https://kastle-lab.org/"
 
 pfs = {
-"scales": Namespace(name_space),
+"kastle-lab": Namespace(name_space),
 "rdf": RDF,
 "rdfs": RDFS,
 "xsd": XSD,
