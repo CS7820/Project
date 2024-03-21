@@ -15,7 +15,11 @@ As knowledge graphs are developed as a source of truth in their respective domai
 
 We propose performing an attack on a KG focused in the legal domain which would affect learned embedding models and their handling of KG completion tasks.
 
-Data.gov provides a non-federal dataset covering information on sentencing data of guilty verdicts in cases from Cooke County in Illinois[5]. From this new KG, we hope to explore the following research question(s):
+Data.gov provides a non-federal dataset covering information on sentencing data of guilty verdicts in cases from Cooke County in Illinois[5]. The developed knowledge graph will be able to answer the following competency questions:
+1) Who are the agents and their respective role for Case [insert]?
+2) What charges has Judge [insert] sentenced?
+
+From this new KG, we hope to explore the following research question(s):
 1) At what rate of perturbed data does the reliability of the knowledge graph in representing the Case, the Court, the corresponding Agents to a Case, and the Sentencing Charge start to diminish?
 2) Can perturbed KGE models demonstrate biasness in court sentencing?
 
@@ -68,40 +72,6 @@ We expect an attacked KG, that is to say one that has had falsified facts added 
 To explore a KG's query performance, we will implement the CRIAGE framework which provides both an analysis in optimal candidates as a list of facts which can be attacked with the highest likelihood of impacting the KG's ability to query and the attack itself. A set of competency questions (CQ), which can be inspired by SCALE's Satyrn Notebooks as an investigative starting point, will be prompted by both KGs with the expectation that the corrupted KG corrupted by adversarial attack results in both omission of facts that would be true or added false claims.
 
 We hypothesize the results of the following CQs will be affected by a targeted attack on the knowledge graph:
-1) Who are the agents and their respective role for Case [insert]?
-```sql
-# 1) Who are the agents and their respective role for Case [insert]?
-SELECT ?Case ?Agent ?Role ?Name WHERE {
-#  ?Case a scales:CaseCriminal .
-  ?Case scales:hasAgent ?Agent .
-  ?Agent scales:hasName ?Name .
-  ?Agent scales:hasRoleInCase ?Role .
-}   
-OrderBy ?Case ?Agent ?Role ?Name
-```
-
-2) What charges has Judge [insert] sentenced?
-```sql
-# 2) What charges has Judge [insert] sentenced?
-SELECT ?Agent ?Role ?Name ?Charge ?Content WHERE {
-  ?Agent scales:hasRoleInCase ?Role .
-  ?Agent scales:hasName ?Name .
-  ?Charge a scales:Charge .
-  ?Charge scales:hasContents ?Content .
-  Filter(?Role = "Assigned Judge")
-}   
-```
-3) What circuit was Case [insert] held in?
-```sql
-# 3) What circuit was Case [insert] held in?
-SELECT ?Case ?CaseType ?Court ?Name ?Circuit WHERE {
-  ?Case a ?CaseType .
-  ?Case scales:isInCourt ?Court .
-  ?Court scales:hasName ?Name .
-  ?Court scales:isInCircuit ?Circuit .
-}   
-OrderBy ?Case ?Court ?Circuit
-```
 
 To explore a KG's overall performance in Knowledge Graph Completion (KGC) tasks, enabled by Knowledge Graph Embedding (KGE), we will train KGE models with both the provided SCALES KG, as a base, and an attacked SCALES KG, as a corrupted KG. We expect both graphs to still maintain the functionality for link prediction, thus inferring facts in order to complete a KG; however, we hope to observe the evaluation upon a targetted fact that had been attacked to have differing results, specifically being more difficult to find within a top-k ranking system. 
 
