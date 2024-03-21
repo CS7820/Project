@@ -1,4 +1,4 @@
-# Attacking Litigation Knowledge Graph (SCALES OKN) with Falsified Triples
+# Attacking Litigation Knowledge Graph with Falsified Triples
 
 ## Administrivia
 * **Super Duper Group group**:
@@ -9,18 +9,17 @@
     * Stacie Severyn
 
 #  Problem Statement
-KG are an established tool to represent structured data.  
+Knowledge graphs (KGs) are an established tool used to represent structured data[1]. Knowledge Graph Embedding (KGE) combines techniques from machine learning to understand semantics in the data and also to complete knowledge graphs by performing link predictions, inferring relationships between represented concepts[2]. These learned models share vulnerabilities similar to traditional machine learning models as the data source, the KG in this case, is prone to adversarial and poisoning attacks that decrease the performance of embedding models to handle their tasks[3].
 
-The Cooke Dataset (properly label/name) represents information pertaining to court cases around Cooke County of Illlnois. If a KG were to be developed with this dataset, a user may query a judge for an expected charge. 
+As knowledge graphs are developed as a source of truth in their respective domains, if a KG were to be attacked, a user who is quering within this domain may falsified facts returned to them. We propose performing an attack on a KG focused in the legal domain which would not only affect a learned embedded model but also now corrupted with false facts affecting any querying for factual results, invalidating the KGs application.  
 
-KGE is used for link prediction.
+Data.gov provides a non-federal dataset covering information on sentencing data of guilty verdicts in cases from Cooke County in Illinois[5]. From this new KG, we hope to explore the following research question(s):
+1) At what rate of perturbed data does the reliability of the knowledge graph in representing the Case, the Court, the corresponding Agents to a Case, and the Sentencing Charge start to diminish?
+2) Can KGE demonstrate biasness in court sentencing?
 
-Embedding the Cooke Dataset KG allows for link prediction.
+To experiment RQ1, we intend to implement CRIAGE[4], which is a framework designed to challenge the robustness and interpretability of link prediction tasks of KGE models. [4] introduces both the ability to add false facts and also remove targeted facts -- both based on an influence score (a metric gauging the change of a prediction score of an observed fact when perturbed).
 
-We ask the following RQ:
-1) At what rate of perturbed data does the reliability of the knowledge graph in representing Case, Court, Agent, and Charge relationships start to diminish?
-
-We hypothesize that we some judges may sentence the same charge at different severities.
+In exploring RQ 2, we hypothesize that a corrupted KG after a targeted adversarial attack can skew a KGs facts. To display this, we will target judges and their ruling sentence and hope to demonstrate these judges sentencing similar charges (in the sentencing commitment) in varying severities.
 
 # Justification
 ##  Why NeSy AI
@@ -32,9 +31,12 @@ Utilizing Real Data vs Toy Data (as seen in Declan's papers)
 ## Broader Impacts:
 User querying on judge for sentence biasness
 
-
-
-
+# References
+* [1] Schad, J. Bridging the gap: Integrating knowledge graphs and large language models, Oct 2023.
+* [2] S. Ji, S. Pan, E. Cambria, P. Marttinen and P. S. Yu, "A Survey on Knowledge Graphs: Representation, Acquisition, and Applications," in IEEE Transactions on Neural Networks and Learning Systems, vol. 33, no. 2, pp. 494-514, Feb. 2022, doi: 10.1109/TNNLS.2021.3070843. 
+* [3] Bhardwaj, P., Kelleher, J., Costabello, L., and O’Sullivan, D. Adversarial attacks on knowledge graph embeddings via instance attribution methods, 2021.
+* [4] Pezeshkpour, P., Tian, Y., and Singh, S. Investigating robustness and interpretability of link prediction via adversarial modifications. CoRR abs/1905.00563 (2019).
+* [5] https://catalog.data.gov/dataset/sentencing. Updated on 24 Feb., 2024. Accessed on 20 Mar., 2024.
 
 =======
 # Problem Statement
@@ -113,6 +115,3 @@ Research into KGE and adversarial attacks on KGs.
 Societal:  KG attacks can affect the outcome of an individual's verdict of their case.
 
 
-# References
-* [1] Schad, J. Bridging the gap: Integrating knowledge graphs and large language models, Oct 2023.
-* [2] https://scales-okn.org/. Accessed on 5 Mar. 2024.
