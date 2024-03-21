@@ -29,13 +29,15 @@ In exploring RQ 2, we hypothesize that a corrupted KG after a targeted adversari
 
 # Justification
 ##  Why NeSy AI
-We are using NEsy AI to utilize KGE to perform link prediction. NeSy AI offers a promising approach for addressing the challenges associated with KGE and link prediction tasks, particularly in domains like court data where the reliability and robustness of AI systems are most important. NeSy AI combines symbolic representations with subsymbolic representations learned by neural networks. This combination allows for more robust handling of structured data while also utilizing the power of neural networks to capture the  patterns and semantics. The combination of reasoning and symbolic knowledge better equip the model to combat adversarial attacks. This will make it interesting to attack the model in an attempt to falsify predicted links, as it is natuarlly more difficult to manipulate the data. 
+We are using NeSy AI to train KGE models that are able to perform link prediction. The KGE models will be trained particularly with legal data  where the reliability and robustness of the KG provides a source of truth in analyzing information pertaining to court cases. NeSy AI combines symbolic representations with subsymbolic representations learned by neural networks. This combination allows for more robust handling of structured data while also utilizing the power of neural networks to capture the  patterns and semantics. The combination of reasoning and symbolic knowledge better equip the model to combat adversarial attacks. This will make it interesting to attack the model in an attempt to falsify predicted links, as it is natuarlly more difficult to manipulate the data. 
+
+We expect that KGE models will embed data about case's assigned judge and the judge's verdict ruling, and we hope to analyze the underlying semantic between these two concepts. We hope that our analysis will reveal a relationship that points towards a biasness in the judge's verdict ruling regardless of the severity of a crime.
 
 ## Intellectual Merit
-Our research demonstrates an attack on a realistic, non-toy dataset. The dataset includes litigation data for Cook County of Illinos. We will investigate the robustness and interpretability of link prediction via adversarial modification utilizing CRIAGE. CRIAGE will be utilized to determine the fact(s) to add or remove from the knowledge graph that changes the prediction for a target after the model is retrained. 
+Previous research results suggest the decreased performance in KGE models after the KG has been perturbed. The KGs used in these research are benchmarking datasets, designed to challenge the KGE models, like FB15k-237 and WN18RR. Our research hopes to demonstrate an attack on a realistic, non-toy dataset. The dataset includes litigation data from Cooke County of Illinos. We will investigate the robustness and interpretability of link prediction via adversarial modification utilizing the CRIAGE framework. CRIAGE is designed to determine the fact(s) to add or remove from the knowledge graph that changes the prediction for a target after the model is retrained. 
 
 ## Broader Impacts:
-The intent of our research is to determine if any judge in the Cook County of Illinois dataset has a bias towards a charge. If the public were to be made aware of this bias they could proceed as necessary if convicted of the relevant charge. If a bias is found the judge may be found to set a favorable sentence towards someone convicted of the biased charge or have an unfavorable sentence length towards the charged person.
+The primary interest in this research is to identify whether there exists a biasness in a judge and their sentencing towards a crime regardless of the crime's severity. If a bias is identified, the results of this research could impose real-world consequences in the legal community. As the judge should be a source of just rulings held to extreme ethical standards, if a judge is found favoring a certain ruling, the case could be disputed for a mistrial due to unfair circumstances, and the ruling judge would have to be held accountable for the unjust acts. 
 
 # References
 * [1] Schad, J. Bridging the gap: Integrating knowledge graphs and large language models, Oct 2023.
@@ -43,47 +45,3 @@ The intent of our research is to determine if any judge in the Cook County of Il
 * [3] Bhardwaj, P., Kelleher, J., Costabello, L., and O’Sullivan, D. Adversarial attacks on knowledge graph embeddings via instance attribution methods, 2021.
 * [4] Pezeshkpour, P., Tian, Y., and Singh, S. Investigating robustness and interpretability of link prediction via adversarial modifications. CoRR abs/1905.00563 (2019).
 * [5] https://catalog.data.gov/dataset/sentencing. Updated on 24 Feb., 2024. Accessed on 20 Mar., 2024.
-
-=======
-# Problem Statement
-When trained with Knowledge Graphs (KG), Artificial Intelligence (AI) reports higher accuracy while reducing hallucinogenic effects due to the added semantic understanding to the data[1]. As with other machine learning models, the knowledge graph for a KG-powered AI acts as another source of vulnerability, open to adversarial and poisoning attacks targeting the data source, which in this case act as KG facts (or triplets).
-
-The SCALES-OKN knowledge graph provides a tool to the public in understanding the federal judiciary inner-workings, which as a whole can be considered as constructed from the written opinions of less than 10% of cases, as written on their home page[2]. As a knowledge tool to the public, the organization's next goal is to provide an AI powered with their litigation KG to better serve the public in dissolving the mystery of this particular domain.
-
-In our proposed research, we want to explore adversarial attack impact on a non-toy dataset, which if realistically implemented would impose real-world consequences to the verdict ruling for individuals.
-
-% Formulated RQs
-1) What metrics or indicators can be used to quantify the level of unreliability in the knowledge graph resulting from the manipulation of data, and at what point do these metrics reach a critical threshold necessitating corrective action or reevaluation of the graph's integrity?
-
-2) Can the results of the charge be specifically changed to another type of charge. 
-
-
-We expect an attacked KG, that is to say one that has had falsified facts added and true facts removed, will begin answering queries with false claims - thus invalidating the knowlege graph's performance. An interesting angle for this research is to also obtain an understanding of a threshold of applied adversarial attacks in order to cause the decreased performance on the knowledge graph.
-
-# Background and Relevance
-## Ontology and LLM
-
-## Adversarial and Poisoning Attacks
-
-
-# Proposed Methodology and Expected Results
-To explore a KG's query performance, we will implement the CRIAGE framework which provides both an analysis in optimal candidates as a list of facts which can be attacked with the highest likelihood of impacting the KG's ability to query and the attack itself. A set of competency questions (CQ), which can be inspired by SCALE's Satyrn Notebooks as an investigative starting point, will be prompted by both KGs with the expectation that the corrupted KG corrupted by adversarial attack results in both omission of facts that would be true or added false claims.
-
-We hypothesize the results of the following CQs will be affected by a targeted attack on the knowledge graph:
-
-To explore a KG's overall performance in Knowledge Graph Completion (KGC) tasks, enabled by Knowledge Graph Embedding (KGE), we will train KGE models with both the provided SCALES KG, as a base, and an attacked SCALES KG, as a corrupted KG. We expect both graphs to still maintain the functionality for link prediction, thus inferring facts in order to complete a KG; however, we hope to observe the evaluation upon a targetted fact that had been attacked to have differing results, specifically being more difficult to find within a top-k ranking system. 
-
-# Significance
-## Cogan: Why NeSy AI?
-The SCALES OKN exists as a knowledge base (knowledge graph). This is publicly available data that can be attacked via adding or removing facts from the knowledge base which directly affects KGE performance for predictive tasks in KG Completion (KGC).
-
-The research is focused on the impacts of these attacks.
-
-## Cogan: Intellectual Merit
-Research into KGE and adversarial attacks on KGs.
-
-## Broader Impacts
-
-Societal:  KG attacks can affect the outcome of an individual's verdict of their case.
-
-
