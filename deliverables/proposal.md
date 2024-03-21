@@ -33,6 +33,8 @@ Utilizing Real Data vs Toy Data (as seen in Declan's papers)
 ## Broader Impacts:
 User querying on judge for sentence biasness
 
+The intent of our research is to determine if any judge in the Cook County of Illinois dataset has a bias towards a charge. If the public were to be made aware of this bias they could proceed as necessary if convicted of the relevant charge. If a bias is found the judge may be found to set a favorable sentence towards someone convicted of the biased charge or have an unfavorable sentence length towards the charged person.
+
 # References
 * [1] Schad, J. Bridging the gap: Integrating knowledge graphs and large language models, Oct 2023.
 * [2] S. Ji, S. Pan, E. Cambria, P. Marttinen and P. S. Yu, "A Survey on Knowledge Graphs: Representation, Acquisition, and Applications," in IEEE Transactions on Neural Networks and Learning Systems, vol. 33, no. 2, pp. 494-514, Feb. 2022, doi: 10.1109/TNNLS.2021.3070843. 
