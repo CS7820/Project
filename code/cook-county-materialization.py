@@ -9,10 +9,13 @@ data_path = "../dataset/cook-county"
 input_file = "Sentencing.csv"
 
 output_path = "../dataset/cook-county"
-output_file = "cook-county-cases-guilty-verdict.ttl"
 
 write_file = "cook-county-cases-guilty-verdict.txt"
-outFile = open(os.path.join(output_path, write_file), "w")
+write_path = os.path.join(output_path, write_file)
+if(os.path.exists(write_path)):
+    outFile = open(write_path, "a")
+else:
+    outFile = open(write_path, "w")
 
 
 # Columns to Consider in Materialization
@@ -83,7 +86,7 @@ def bind_spo(subject, property, object):
 def write_spo(s,p,o):
     outFile.write(f"{s}\t{p}\t{o}\n")
 
-def materialize_graph():
+def materialize_graph(begin, end, output_file):
     csv_path = os.path.join(data_path, input_file)
     df = pd.read_csv(csv_path)
     
@@ -98,7 +101,11 @@ def materialize_graph():
     judge_role_uri = pfs['sdg-onto']["AssignedJudge"]
 
     previous = 0
-    for _, row in df.iterrows():
+    for df_ind, row in df.iterrows():
+        if df_ind < begin:
+            continue
+        if df_ind == end:
+            break
         #  Materialize Case
         ## General Case Info
         ## "CASE_ID"
@@ -254,8 +261,20 @@ def materialize_graph():
                 bind_spo(charge_uri, pfs['sdg-onto']['hasCommitment'], comm_uri)
                 
                 write_spo(charge_label, 'hasCommitment', commit_label)
+
     temp = graph.serialize(format="turtle", encoding="utf-8", 
                            destination=os.path.join(output_path, output_file))        
 
 if __name__ == "__main__":
-    materialize_graph()
+    count = 1
+    step = 10000
+    begin = 0
+    end = step
+    for i in range(0, 300000, step):
+        output_file = f"cook-county-cases-guilty-verdict-0{count}.ttl"
+        materialize_graph(begin, end, output_file)
+
+        begin = begin+step
+        end = end+step
+        count +=1
+    outFile.close()
