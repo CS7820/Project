@@ -69,8 +69,6 @@ def init_kg():
         kg.bind(prefix, pfs[prefix])
     return kg
 
-graph = init_kg()
-
 def generate_entityDict(type, col):
     count = 0
     entityDict = dict()
@@ -86,7 +84,7 @@ def bind_spo(subject, property, object):
 def write_spo(s,p,o):
     outFile.write(f"{s}\t{p}\t{o}\n")
 
-def materialize_graph(begin, end, output_file):
+def materialize_graph(graph, begin, end, output_file):
     csv_path = os.path.join(data_path, input_file)
     df = pd.read_csv(csv_path)
     
@@ -265,6 +263,24 @@ def materialize_graph(begin, end, output_file):
     temp = graph.serialize(format="turtle", encoding="utf-8", 
                            destination=os.path.join(output_path, output_file))        
 
+def cleanup_duplicates():
+    '''
+        Due to the nature of singular cases containing multiple charges, 
+        there is the possibility duplicate facts are added to the KG.
+
+        This is automatically cleaned from the TTL files from the Triplestore.
+        cleanup_duplicates will clean up the .txt file, or KG written to a text file.
+    '''
+    with open(write_path, "r") as inp:
+        lines = [ line for line in inp.readlines()]
+    unique_set = set()
+    for line in lines:
+        unique_set.add(line)
+
+    with open(write_path, "w") as out:
+        for u in unique_set:
+            out.write(u)
+
 if __name__ == "__main__":
     count = 1
     step = 10000
@@ -272,9 +288,11 @@ if __name__ == "__main__":
     end = step
     for i in range(0, 300000, step):
         output_file = f"cook-county-cases-guilty-verdict-0{count}.ttl"
-        materialize_graph(begin, end, output_file)
-
+        graph = init_kg() # Reset graph per partial-complete
+        materialize_graph(graph, begin, end, output_file)
+        print(f"Materialization partial complete: {output_file}")
         begin = begin+step
         end = end+step
         count +=1
     outFile.close()
+    cleanup_duplicates()
