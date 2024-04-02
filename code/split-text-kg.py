@@ -5,9 +5,9 @@
 
 import os
 
-output_path = "../dataset/cook-county"
+txt_output_path = "../dataset/cook-county/txt-format-files"
 text_kg_file = "cook-county-cases-guilty-verdict.txt"
-input_path = os.path.join(output_path, text_kg_file)
+input_path = os.path.join(txt_output_path, text_kg_file)
 
 file_count = 8 # How many text files do you want?
 
@@ -28,7 +28,7 @@ def split_text_kg(file_count=2):
         else:
             iter_file_name = f"cook-county-cases-guilty-verdict-{i}.txt"
 
-        write_path = os.path.join(output_path, iter_file_name)
+        write_path = os.path.join(txt_output_path, iter_file_name)
         with open(write_path, "w") as out:
             for line in lines[begin:end]:
                 out.write(line)

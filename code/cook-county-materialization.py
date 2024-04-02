@@ -8,10 +8,10 @@ from rdflib.plugins.parsers.notation3 import ParserError
 data_path = "../dataset/cook-county" 
 input_file = "Sentencing.csv"
 
-output_path = "../dataset/cook-county"
-
+ttl_output_path = "../dataset/cook-county/ttl-files"
+txt_output_path = "../dataset/cook-county/txt-format-files"
 write_file = "cook-county-cases-guilty-verdict.txt"
-write_path = os.path.join(output_path, write_file)
+write_path = os.path.join(txt_output_path, write_file)
 if(os.path.exists(write_path)):
     outFile = open(write_path, "a")
 else:
@@ -261,7 +261,7 @@ def materialize_graph(graph, begin, end, output_file):
                 write_spo(charge_label, 'hasCommitment', commit_label)
 
     temp = graph.serialize(format="turtle", encoding="utf-8", 
-                           destination=os.path.join(output_path, output_file))        
+                           destination=os.path.join(ttl_output_path, output_file))        
 
 def cleanup_duplicates():
     '''
