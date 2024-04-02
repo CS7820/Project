@@ -4,27 +4,20 @@
 ### Attending
 * Brandon Dave
 * Calvin Greenewald
-
-### Regrets
 * Stacie Severyn
 
 ### Agenda
-* Discuss next stops from sub-graph formation
+* Discuss sub-graph now materialized
+* Discuss schema-diagrams
+* Discuss CRIAGE
 
 ### Actions
-* Full-graph Diagramming (yEd) 
-Assigned to: Calvin
-Due by: Tuesday, 4/2
-* Sub-graph materialization using Python rdflib
-Assigned to: Brandon
-Due by: Tuesday, 4/2
-* Investigation to CRIAGE
-    * Where is CRIAGE framework hosted?
-Assigned to: Stacie, support from Brandon and Calvin (if available)
-Due by: Friday, 4/2
+* CRIAGE implementation on subgraph
+    * Assigned to: Everyone
+    * Report back 4/4 on findings
 
 ### Notes 
-* Next meeting is 4/2 (during CS7820 hours)
+* Next meeting is 4/4 (during CS7820 hours)
 
 ## Date: 3/28/24
 ### Attending
