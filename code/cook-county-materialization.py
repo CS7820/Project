@@ -287,7 +287,12 @@ if __name__ == "__main__":
     begin = 0
     end = step
     for i in range(0, 300000, step):
-        output_file = f"cook-county-cases-guilty-verdict-0{count}.ttl"
+        output_file = ""
+        if count < 10:
+            output_file = f"cook-county-cases-guilty-verdict-0{count}.ttl"
+        else:
+            output_file = f"cook-county-cases-guilty-verdict-{count}.ttl"
+
         graph = init_kg() # Reset graph per partial-complete
         materialize_graph(graph, begin, end, output_file)
         print(f"Materialization partial complete: {output_file}")
