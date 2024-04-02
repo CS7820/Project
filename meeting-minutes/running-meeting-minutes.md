@@ -1,4 +1,31 @@
 # Running Meeting Minutes
+
+## Date: 4/2/24
+### Attending
+* Brandon Dave
+* Calvin Greenewald
+
+### Regrets
+* Stacie Severyn
+
+### Agenda
+* Discuss next stops from sub-graph formation
+
+### Actions
+* Full-graph Diagramming (yEd) 
+Assigned to: Calvin
+Due by: Tuesday, 4/2
+* Sub-graph materialization using Python rdflib
+Assigned to: Brandon
+Due by: Tuesday, 4/2
+* Investigation to CRIAGE
+    * Where is CRIAGE framework hosted?
+Assigned to: Stacie, support from Brandon and Calvin (if available)
+Due by: Friday, 4/2
+
+### Notes 
+* Next meeting is 4/2 (during CS7820 hours)
+
 ## Date: 3/28/24
 ### Attending
 * Brandon Dave
