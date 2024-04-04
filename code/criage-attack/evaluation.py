@@ -63,8 +63,8 @@ def ranking_and_hits(model, dev_rank_batcher, vocab, name, epoch, dict_idtotoken
             pred1[i][filter1] = 0.0
             pred2[i][filter2] = 0.0
             # write base the saved values
-            pred1[i][e2[i]] = target_value1
-            pred2[i][e1[i]] = target_value2
+            pred1[i][e2[i]] = target_value1.clone()
+            pred2[i][e1[i]] = target_value2.clone()
 
 
         # sort and rank
