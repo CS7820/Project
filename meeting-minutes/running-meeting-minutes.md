@@ -9,11 +9,11 @@
 * Build and run singularity container on fry for CRIAGE implementation on subgraph 
 
 ### Actions
-* Split the data into train-test-validate
+* **Split the data into train-test-validate**
 * Assigned to: Calvin
 * Due 4/7
 
-* Create presentation in Google Slides, including Introduction 
+* **Create presentation in Google Slides, including Introduction**
 * Assigned to: Stacie
 * Due 4/9
 
