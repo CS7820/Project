@@ -1,4 +1,25 @@
 # Running Meeting Minutes
+## Date: 4/4/24
+### Attending
+* Brandon Dave
+* Calvin Greenewald
+* Stacie Severyn
+
+### Agenda
+* Build and run singularity container on fry for CRIAGE implementation on subgraph 
+
+### Actions
+* Split the data into train-test-validate
+* Assigned to: Calvin
+* Due 4/7
+
+* Create presentation in Google Slides, including Introduction 
+* Assigned to: Stacie
+* Due 4/9
+
+### Notes 
+* Group discussion day 4/9 (during class hours)
+
 
 ## Date: 4/2/24
 ### Attending
