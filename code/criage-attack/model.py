@@ -47,7 +47,7 @@ class Complex(torch.nn.Module):
         imgrealimg = torch.mm(e1_embedded_img*rel_embedded_real, self.emb_e_img.weight.transpose(1,0))
         imgimgreal = torch.mm(e1_embedded_img*rel_embedded_img, self.emb_e_real.weight.transpose(1,0))
         pred = realrealreal + realimgimg + imgrealimg - imgimgreal
-        pred = F.sigmoid(pred)
+        pred = torch.sigmoid(pred)
 
         return pred
 
@@ -75,7 +75,7 @@ class DistMult(torch.nn.Module):
 
 
         pred = torch.mm(e1_embedded*rel_embedded, self.emb_e.weight.transpose(1,0))
-        pred = F.sigmoid(pred)
+        pred = torch.sigmoid(pred)
 
         return pred
 
@@ -123,6 +123,6 @@ class ConvE(torch.nn.Module):
         x = torch.mm(x, self.emb_e.weight.transpose(1,0))
         x += self.b.expand_as(x)
 
-        pred = F.sigmoid(x)
+        pred = torch.sigmoid(x)
 
         return pred
