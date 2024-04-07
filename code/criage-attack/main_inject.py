@@ -245,7 +245,7 @@ def main():
     print(np.sum(params))
 
 ################################################ loading
-    model.load_state_dict(torch.load('embeddings/auto-embeddings.pt'))
+    model.load_state_dict(torch.load('./embeddings/auto-embeddings.pt'))
 
 
     opt = torch.optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=Config.learning_rate, weight_decay=Config.L2)

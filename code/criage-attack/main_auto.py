@@ -173,7 +173,7 @@ def main():
 
 ################################################ loading
     model_state = model.state_dict()
-    pretrained = torch.load('embeddings/original_embeddings.pt')
+    pretrained = torch.load('./embeddings/original_embeddings.pt')
     for name in model_state:
         if name in pretrained:
             model_state[name].copy_(pretrained[name])   
@@ -201,7 +201,8 @@ def main():
         print('saving to {0}'.format(model_path))
 
         if epoch == 90:
-            torch.save(model.state_dict(), "embeddings/auto-embeddings.pt")
+            with open(os.path.join("./embeddings", f"original_embeddings.pt"), "w") as outF:
+                torch.save(model.state_dict(), outF)
 
 
 if __name__ == '__main__':

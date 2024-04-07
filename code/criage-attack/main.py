@@ -182,8 +182,7 @@ def main():
 
 
     opt = torch.optim.Adam(model.parameters(), lr=Config.learning_rate, weight_decay=Config.L2)
-    # for epoch in range(epochs):
-    for epoch in range(1):
+    for epoch in range(epochs):
         model.train()
 
         for i, str2var in enumerate(train_batcher):
@@ -211,7 +210,8 @@ def main():
 
         if epoch % 90 == 0 and epoch != 0:
             model.eval()
-            torch.save(model.state_dict(), "./embeddings/original_embeddings.pt")
+            with open(os.path.join("./embeddings", f"original_embeddings.pt"), "w") as outF:
+                torch.save(model.state_dict(), outF)
 
 
 if __name__ == '__main__':
