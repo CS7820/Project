@@ -182,7 +182,8 @@ def main():
 
 
     opt = torch.optim.Adam(model.parameters(), lr=Config.learning_rate, weight_decay=Config.L2)
-    for epoch in range(epochs):
+    # for epoch in range(epochs):
+    for epoch in range(1):
         model.train()
 
         for i, str2var in enumerate(train_batcher):
