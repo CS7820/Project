@@ -55,7 +55,15 @@ load = False
 
 if Config.dataset is None:
     Config.dataset = 'WN-18'
-model_path = 'saved_models/{0}_{1}.model'.format(Config.dataset, model_name)
+
+if not os.path.exists("./saved_models"):
+    os.mkdir("./saved_models")
+
+saved_to_path = os.path.join("./saved_models",f'{Config.dataset}_{model_name}.model')
+if not os.path.exists(saved_to_path):
+    os.mkdir(saved_to_path)
+
+model_path = './saved_models/{0}_{1}.model'.format(Config.dataset, model_name)
 
 
 ''' Preprocess knowledge graph using spodernet. '''

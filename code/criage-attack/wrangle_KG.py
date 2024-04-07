@@ -25,7 +25,7 @@ else:
 print('Processing dataset {0}'.format(dataset_name))
 
 rdm = np.random.RandomState(2342423)
-base_path = 'data/{0}/'.format(dataset_name)
+base_path = './data/{0}/'.format(dataset_name)
 files = ['train.txt', 'valid.txt', 'test.txt']
 
 data = []
