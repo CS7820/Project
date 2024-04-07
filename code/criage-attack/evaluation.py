@@ -81,6 +81,16 @@ def ranking_and_hits(model, dev_rank_batcher, vocab, name, epoch, dict_idtotoken
             rank1 = np.where(argsort1[i]==e2[i, 0])[0][0]
             rank2 = np.where(argsort2[i]==e1[i, 0])[0][0]
 
+            if rank1.size > 0:
+                rank1 = rank1[0]
+            else:
+                rank1 = len(argsort1[i])
+
+            if rank2.size > 0:
+                rank2 = rank2[0]
+            else:
+                rank2 = len(argsort2[i])
+                
             ranks.append(rank1+1)
             ranks_left.append(rank1+1)
             ranks.append(rank2+1)
