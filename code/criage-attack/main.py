@@ -129,8 +129,8 @@ def main():
         model = DistMult(vocab['e1'].num_token, vocab['rel'].num_token)
     elif Config.model_name == 'ComplEx':
         model = Complex(vocab['e1'].num_token, vocab['rel'].num_token)
-    elif Config.model_name == 'TransE':
-        model = TransE(vocab['e1'].num_token, num_rel)
+    # elif Config.model_name == 'TransE':
+    #     model = TransE(vocab['e1'].num_token, num_rel)
     else:
         log.info('Unknown model: {0}', Config.model_name)
         raise Exception("Unknown model!")
