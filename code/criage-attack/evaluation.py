@@ -221,3 +221,5 @@ def attack_tri(model, dev_rank_batcher, vocab, name, epoch, dict_idtotoken, dict
     #np.save('./data/attack_set', attack_set)
     print(pouya)
     return attack_set
+
+
