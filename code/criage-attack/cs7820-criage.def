@@ -17,9 +17,9 @@ req.out /tmp/req.out
 		requests \
 		colorama \
 		ontospy \
-                matplotlib \
-                tqdm \
-                pyproj \
-                s2sphere
+		matplotlib \
+		tqdm \
+		pyproj \
+		s2sphere
 
 pip install -r /tmp/req.out
