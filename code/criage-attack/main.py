@@ -53,7 +53,7 @@ Config.embedding_dim = 200
 #model_name = 'DistMult_{0}_{1}'.format(Config.input_dropout, Config.dropout)
 model_name = '{2}_{0}_{1}'.format(Config.input_dropout, Config.dropout, Config.model_name)
 epochs = 95
-load = False
+load = True
 
 #####
 if Config.dataset is None:
