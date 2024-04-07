@@ -4,6 +4,7 @@ import datetime
 import operator
 import sys
 import importlib
+import os
 importlib.reload(sys)
 # sys.setdefaultencoding('utf-8')
 
@@ -14,7 +15,10 @@ from torch.autograd import Variable
 from sklearn import metrics
 
 #timer = CUDATimer()
-log = Logger('./evaluation-{0}.py.txt'.format(datetime.datetime.now()))
+if not os.path.exists("./log-files"):
+    os.mkdir("./log-files")
+log_file = os.path.join("./log-files", f"evaluation-{datetime.datetime.now()}.py.txt" )
+log = Logger(log_file)
 
 def ranking_and_hits(model, dev_rank_batcher, vocab, name, epoch, dict_idtotoken, dict_idtorel):
     log.info('')

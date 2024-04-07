@@ -6,6 +6,7 @@ import numpy
 import argparse
 import sys
 import os
+import datetime
 import math
 import importlib
 importlib.reload(sys)
@@ -59,12 +60,16 @@ if Config.dataset is None:
 if not os.path.exists("./saved_models"):
     os.mkdir("./saved_models")
 
+if not os.path.exists("./log-files"):
+    os.mkdir("./log-files")
+log_file = os.path.join("./log-files", f"evaluation-{datetime.datetime.now()}.py.txt" )
+log = Logger(log_file)
+
 saved_to_path = os.path.join("./saved_models",f'{Config.dataset}_{model_name}.model')
 if not os.path.exists(saved_to_path):
     os.mkdir(saved_to_path)
 
 model_path = './saved_models/{0}_{1}.model'.format(Config.dataset, model_name)
-
 
 def sig (x, y):
     return 1 / (1 + np.exp(-np.dot(x, np.transpose(y))))
