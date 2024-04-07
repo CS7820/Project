@@ -78,16 +78,17 @@ def ranking_and_hits(model, dev_rank_batcher, vocab, name, epoch, dict_idtotoken
 
         for i in range(Config.batch_size):
             # find the rank of the target entities
-            rank1 = np.where(argsort1[i]==e2[i, 0])[0][0]
-            rank2 = np.where(argsort2[i]==e1[i, 0])[0][0]
+            # find the rank of the target entities
+            rank1_indices = np.where(argsort1[i] == e2[i, 0])[0]
+            rank2_indices = np.where(argsort2[i] == e1[i, 0])[0]
 
-            if rank1.size > 0:
-                rank1 = rank1[0]
+            if len(rank1_indices) > 0:
+                rank1 = rank1_indices[0]
             else:
                 rank1 = len(argsort1[i])
 
-            if rank2.size > 0:
-                rank2 = rank2[0]
+            if len(rank2_indices) > 0:
+                rank2 = rank2_indices[0]
             else:
                 rank2 = len(argsort2[i])
                 
