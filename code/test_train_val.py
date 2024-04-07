@@ -33,6 +33,6 @@ for file_name in file_names:
     test_data, val_data = train_test_split(test_val_data, test_size=0.5, random_state=42)
         
     # Save each set to separate TSV files in the same directory
-    train_data.to_csv(os.path.join(data_directory, f'train-{file_name[:-4]}.txt'), sep='\t', index=False)
-    test_data.to_csv(os.path.join(data_directory, f'test-{file_name[:-4]}.txt'), sep='\t', index=False)
-    val_data.to_csv(os.path.join(data_directory, f'validate{file_name[:-4]}.txt'), sep='\t', index=False)
+    train_data.to_csv(os.path.join(data_directory, f'train-{file_name[:-4]}.txt'), sep='\t', index=False, header=False)
+    test_data.to_csv(os.path.join(data_directory, f'test-{file_name[:-4]}.txt'), sep='\t', index=False, header=False)
+    val_data.to_csv(os.path.join(data_directory, f'validate{file_name[:-4]}.txt'), sep='\t', index=False, header=False)
