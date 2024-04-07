@@ -3,13 +3,15 @@ from sklearn.model_selection import train_test_split
 import os
 
 # Directory containing the text files
-data_directory = 'CS7820/Project/tree/main/dataset/cook-county/txt-format-files'
+data_directory = '../dataset/cook-county/txt-format-files'
 
 # Get a list of all text files in the directory
 file_names = os.listdir(data_directory)
 
 # Iterate over each file
 for file_name in file_names:
+    if("test" in file_name or "train" in file_name or "valid" in file_name):
+        continue # Skip non-split based text files
     if file_name.endswith('.txt'):
         # Initialize an empty list to store valid data
         valid_data = []
@@ -30,8 +32,8 @@ for file_name in file_names:
     test_data, val_data = train_test_split(test_val_data, test_size=0.5, random_state=42)
         
     # Save each set to separate TSV files in the same directory
-    train_data.to_csv(os.path.join(data_directory, f'train-{file_name[:-4]}.tsv'), sep='\t', index=False)
-    test_data.to_csv(os.path.join(data_directory, f'test-{file_name[:-4]}.tsv'), sep='\t', index=False)
-    val_data.to_csv(os.path.join(data_directory, f'validate{file_name[:-4]}.tsv'), sep='\t', index=False)
+    train_data.to_csv(os.path.join(data_directory, f'train-{file_name[:-4]}.txt'), sep='\t', index=False)
+    test_data.to_csv(os.path.join(data_directory, f'test-{file_name[:-4]}.txt'), sep='\t', index=False)
+    val_data.to_csv(os.path.join(data_directory, f'validate{file_name[:-4]}.txt'), sep='\t', index=False)
 	
     print(file_name)
