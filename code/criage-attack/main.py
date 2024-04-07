@@ -13,7 +13,6 @@ importlib.reload(sys)
 # sys.setdefaultencoding('utf-8')
 import codecs
 import random
-import logging as log
 
 from os.path import join
 import torch.backends.cudnn as cudnn
@@ -60,13 +59,11 @@ load = False
 if Config.dataset is None:
     Config.dataset = 'WN-18'
 
+log_file = f"evaluation-{datetime.datetime.now()}.py.txt"
+log = Logger(log_file)
+
 if not os.path.exists("./saved_models"):
     os.mkdir("./saved_models")
-
-if not os.path.exists("./log-files"):
-    os.mkdir("./log-files")
-log_file = os.path.join("./log-files", f"evaluation-{datetime.datetime.now()}.py.txt" )
-log = Logger(log_file)
 
 saved_to_path = os.path.join("./saved_models",f'{Config.dataset}_{model_name}.model')
 if not os.path.exists(saved_to_path):

@@ -15,9 +15,7 @@ from torch.autograd import Variable
 from sklearn import metrics
 
 #timer = CUDATimer()
-if not os.path.exists("./log-files"):
-    os.mkdir("./log-files")
-log_file = os.path.join("./log-files", f"evaluation-{datetime.datetime.now()}.py.txt" )
+log_file = f"evaluation-{datetime.datetime.now()}.py.txt"
 log = Logger(log_file)
 
 def ranking_and_hits(model, dev_rank_batcher, vocab, name, epoch, dict_idtotoken, dict_idtorel):
