@@ -10,6 +10,7 @@ file_names = os.listdir(data_directory)
 
 # Iterate over each file
 for file_name in file_names:
+    print(f"Splitting: {file_name}")
     if("test" in file_name or "train" in file_name or "valid" in file_name):
         continue # Skip non-split based text files
     if file_name.endswith('.txt'):
@@ -35,5 +36,3 @@ for file_name in file_names:
     train_data.to_csv(os.path.join(data_directory, f'train-{file_name[:-4]}.txt'), sep='\t', index=False)
     test_data.to_csv(os.path.join(data_directory, f'test-{file_name[:-4]}.txt'), sep='\t', index=False)
     val_data.to_csv(os.path.join(data_directory, f'validate{file_name[:-4]}.txt'), sep='\t', index=False)
-	
-    print(file_name)
