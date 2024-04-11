@@ -1,4 +1,21 @@
 # Running Meeting Minutes
+## Date: 4/11/24
+### Attending 
+* Brandon Dave
+* Calvin Greenewald
+* Stacie Severyn
+
+### Agenda 
+* Meeting 4/11/24 at **6:30pm** in person
+
+### Actions 
+* **Complete presentation slides**
+* Due: **4/13/24** 
+* Assigned Everyone 
+
+### Notes 
+
+
 ## Date: 4/4/24
 ### Attending
 * Brandon Dave
