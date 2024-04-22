@@ -1,5 +1,5 @@
 # Introduction 
-Knowledge graphs (KGs) are multi-relational directed graphs widely used to represent knowledge in the form of triplets also known as facts. The edges within the graph represent relations between the entities or nodes they connect. KGs serve as a source of information. <!-- (Type another 1-2 sentences) -->
+Knowledge graphs (KGs) are multi-relational directed graphs widely used to represent knowledge in the form of triplets also known as facts. The edges within the graph represent relations between the entities or nodes they connect. KGs serve as a source of informationabout a particular domain. <!-- (Type another 1-2 sentences) -->
 
 KGE combine ML techniques to allow KGs with the ability to infer knowledge that are not explicitly stated in the KG.
 
