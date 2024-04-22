@@ -20,11 +20,15 @@ We hope to continue researching this particular domain by perform AA on a real w
 
 We hope to target facts related to Judge entity types -- isolating the search space for AA attacks, reducing the search space for an attack to be implemented <!--<!-- (maybe specific to charge still). -->
 <!-- (Insert reason -- tie back to intro) -->
+Because CRIAGE did not work as expected, we coded the adversarial attack from scratch. For this topic, the strategy of the attack involved adding and deleting relationships to inject false information into the graph. Both versions of the attack could be targeted in the sense that we inject or remove triples with certain relationships. For example, we oculd remove a triple (s, p, o) that had a certain targeted relationship. Additionally, we could create another triple by injectiong a targeted relationship between nodes. 
+
+The performance of these attacks could be measured through classification accuracy, to ensure that the level of the attack was effective enough to then move to measure the desired metric. 
 
 ## Expected Results
 Our proposed implementation would yield an attack on the embedding space relative to judge entities (unless this changes) .
 
 We would like to explore perturbed embedding space to identify if KGE models can incorrectly infer judge ruled sentencing.  This investigation hopes to understand if attacked KGE can link to causing judges to appear as sentencing towards a bias ruling. A bias ruling is understandable by analyzing similar rulings on similar cases, sometimes with differring judges. We hope to see the perturbed KG consistently inferring a judge towards sentencing more aggressive charges which have harsher jail time/death sentencing. <!-- (Smartify, include typing of entities somehow) -->
+We would meaure this be observing if the model predicts targeted sentencing with greater or lesser severity as the embeddings change.  
 
 We would also like to identify a maximal threshold, perhaps in a percentile, of number of facts to perturb in discovering effectiveness of AA in KGE.
 <!-- (Verify if Declan does this -- if yes, toy v real data, if no, new research) -->
