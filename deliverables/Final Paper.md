@@ -1,9 +1,11 @@
 # Introduction 
-KGs allow for representing structured data providing a source of information.  <!-- (Type another 1-2 sentences) -->
+Knowledge graphs (KGs) are multi-relational directed graphs widely used to represent knowledge in the form of triplets also known as facts. The edges within the graph represent relations between the entities or nodes they connect. KGs serve as a source of information. <!-- (Type another 1-2 sentences) -->
 
 KGE combine ML techniques to allow KGs with the ability to infer knowledge that are not explicitly stated in the KG.
 
 ## Problem Statement 
+Public datasets are susceptible to attacks that involve manipulation of the data. Data can be easily added, modified, or removed from a dataset without a user's awareness. One possible attack includes introducing a bias into a dataset. Our research demonstrates the modification of the Cook County litigation dataset specifically to introduce bias into the dataset regarding the sentence decided upon by the judge given the charge and guilty verdict.
+
 KGEs suffer from susceptibility similar to a machine learning model through AA/Perturbations of the data sources to trained models, in this case the KG.
 
 ... something later...
