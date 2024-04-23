@@ -1,12 +1,10 @@
 # Introduction 
-Knowledge graphs (KGs) are multi-relational directed graphs widely used to represent knowledge in the form of triplets also known as facts. The edges within the graph represent relations between the entities or nodes they connect. KGs serve as a source of informationabout a particular domain. <!-- (Type another 1-2 sentences) -->
+Knowledge graphs (KGs) are multi-relational directed graphs widely used to represent knowledge in the form of triplets also known as facts. The edges within the graph represent relations between the entities or nodes they connect. KGs serve as a source of information about a particular domain. Datasets represented in KGs are accepted as truth but unfortunately they are susceptible to attacks. During the lifetime of the dataset, data can be easily added, modified, or removed without a user's awareness. One possible attack poisoning attack includes introducing bias within the dataset. Our research demonstrates the modification of the Cook County litigation dataset specifically to introduce bias into the dataset regarding the sentence decided upon by the judge given the charge and guilty verdict.
 
 KGE combine ML techniques to allow KGs with the ability to infer knowledge that are not explicitly stated in the KG.
 
 ## Problem Statement 
-Public datasets are susceptible to attacks that involve manipulation of the data. Data can be easily added, modified, or removed from a dataset without a user's awareness. One possible attack includes introducing a bias into a dataset. Our research demonstrates the modification of the Cook County litigation dataset specifically to introduce bias into the dataset regarding the sentence decided upon by the judge given the charge and guilty verdict.
 
-KGEs suffer from susceptibility similar to a machine learning model through AA/Perturbations of the data sources to trained models, in this case the KG.
 
 ... something later...
 
@@ -25,6 +23,9 @@ We hope to target facts related to Judge entity types -- isolating the search sp
 Because CRIAGE did not work as expected, we coded the adversarial attack from scratch. For this topic, the strategy of the attack involved adding and deleting relationships to inject false information into the graph. Both versions of the attack could be targeted in the sense that we inject or remove triples with certain relationships. For example, we oculd remove a triple (s, p, o) that had a certain targeted relationship. Additionally, we could create another triple by injectiong a targeted relationship between nodes. 
 
 The performance of these attacks could be measured through classification accuracy, to ensure that the level of the attack was effective enough to then move to measure the desired metric. 
+
+##Bias
+Bias within a dataset may focus on gender, race, sentencing, etc. We chose to focus on the sentence decided upon by the judge given the charge and guilty verdict. To determine if a judge is biased towards a charge the probability of each sentence assigned by this judge for each charge can be calculated for the entire dataset. This process should be repeated for all judges. It is vital to calculate these probabilities for the original dataset as well as the modified dataset to witness whether bias was introduced. A histogram can be created with the appropriate groupings to visually show the differences between each judge. 
 
 ## Expected Results
 Our proposed implementation would yield an attack on the embedding space relative to judge entities (unless this changes) .
