@@ -1,3 +1,10 @@
+
+
+Important Comment - I believe we should be measuring whether the poisoning attack introduces bias into the dataset. This requires calculations of the inital dataset to be compared to the modified dataset. For the poisoning attack to introduce bias the probabilities of the intial dataset will be much different from the modified dataset for the bias.
+
+
+
+
 # Introduction 
 Knowledge graphs (KGs) are multi-relational directed graphs widely used to represent knowledge in the form of triplets also known as facts. The edges within the graph represent relations between the entities or nodes they connect. KGs serve as a source of information about a particular domain. Datasets represented in KGs are accepted as truth but unfortunately they are susceptible to attacks. During the lifetime of the dataset, data can be easily added, modified, or removed without a user's awareness. One possible attack poisoning attack includes introducing bias within the dataset. Our research demonstrates the modification of the Cook County litigation dataset specifically to introduce bias into the dataset regarding the sentence decided upon by the judge given the charge and guilty verdict.
 
@@ -5,8 +12,6 @@ KGE combine ML techniques to allow KGs with the ability to infer knowledge that 
 
 ## Problem Statement 
 
-
-... something later...
 
 ## State-of-the-Art Analysis/Related Work
 
@@ -36,6 +41,11 @@ We would meaure this be observing if the model predicts targeted sentencing with
 
 We would also like to identify a maximal threshold, perhaps in a percentile, of number of facts to perturb in discovering effectiveness of AA in KGE.
 <!-- (Verify if Declan does this -- if yes, toy v real data, if no, new research) -->
+
+
+## Results
+To demonstrate whether bias is introduced into the Cook County dataset after the poisoning attack the new dataset must be compared to the initial dataset. For each judge, the probability of each charge and the sentences assigned must be calculated. These calculations should be repeated for the modified dataset to allow the differences in the probabilities to be determined. Histograms with the proper groupings for judge, charge, and sentence can be created to visually show the difference or bias added to the dataset.
+
 
 ## Proposed Evaluation 
 While KGE metrics analyzes the plausibility of inferred facts and the presence of existing facts, the validation of incorrectly inferred facts can be validated with unseen valid KG facts. <!-- (This probably needs group-discussed) -->
