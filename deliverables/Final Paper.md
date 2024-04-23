@@ -24,7 +24,8 @@ Because CRIAGE did not work as expected, we coded the adversarial attack from sc
 
 The performance of these attacks could be measured through classification accuracy, to ensure that the level of the attack was effective enough to then move to measure the desired metric. 
 
-##Bias
+
+
 Bias within a dataset may focus on gender, race, sentencing, etc. We chose to focus on the sentence decided upon by the judge given the charge and guilty verdict. To determine if a judge is biased towards a charge the probability of each sentence assigned by this judge for each charge can be calculated for the entire dataset. This process should be repeated for all judges. It is vital to calculate these probabilities for the original dataset as well as the modified dataset to witness whether bias was introduced. A histogram can be created with the appropriate groupings to visually show the differences between each judge. 
 
 ## Expected Results
