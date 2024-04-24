@@ -5,19 +5,21 @@ Important Comment - I believe we should be measuring whether the poisoning attac
 
 
 
-# Introduction 
 Knowledge graphs (KGs) are multi-relational directed graphs widely used to represent knowledge in the form of triplets also known as facts. The edges within the graph represent relations between the entities or nodes they connect. KGs serve as a source of information about a particular domain. Datasets represented in KGs are commonly accepted as truth but unfortunately they are susceptible to attacks. During the lifetime of the dataset, data can be easily added, modified, or removed without a user's awareness. The user accepts the dataset as truth not knowing whether each entity and relationship is accurate, accounted for, or modified to include a bias. One possible poisoning attack includes introducing bias within the dataset. Our research demonstrates modification of the Cook County litigation dataset specifically to introduce bias into the dataset regarding the sentence decided upon by the judge given a charge and guilty verdict.
 
 Within our research we chose to use the Cook County litigation dataset to demonstrate a poisoning attack. The dataset is a real, non-toy dataset therefore allowing the attack to demonstrate real world effects if a bias is successfully amplified. 
 
-The dataset schema includes relationships between 
-## Problem Statement 
-## State-of-the-Art Analysis/Related Work
+Bias within a dataset may focus on gender, race, sentencing, etc. The dataset schema for each case includes relationships, between the Judge, Charge, Sentence, Court, OffenseCategory, etc.  We chose to focus on the sentence decided upon by the judge given the charge and guilty verdict. We believe that it is possible for a judge to be biased when sentencing a defendant. The judge may be biased towards a specific charge due to a previous experience, may be biased towards the defendent themself, may be considered an easy or a harder judge regarding sentencing. The bias we will be targeting is in regards to the sentence imposed by the judge for each charge seen. Can the dataset be attacked to amplify a bias? The bias may be created by modifying the sentence for a charge to be longer, much shorter, etc. For example, given a charge of robbery, the judge may impose a life sentence. Given a charge of murder, the judge may impose a sentence of 10 years.
 
-## Research Contributions
-AA on a KG has already been investigated and these reports reveal negative impacts on KGE performances to which affect KGE models' ability to perform KGE related tasks (KGC, inferring insight).
+To demonstrate the attack the sentences must be analyzed within the initial dataset before modifications are made and the same calculations to make a comparison following the poisoning of the dataset. To determine if a judge is biased towards a charge the probability of each sentence assigned by this judge for each charge can be calculated. This process should be repeated for all judges. It is vital to calculate these probabilities for the original dataset as well as the modified dataset to witness whether bias was introduced. The probability will be a threshold amount higher or lower to claim bias was introduced. A histogram can be created with the appropriate groupings(judge:charge:sentence) to visually show the differences between each judge. 
 
-We hope to continue researching this particular domain by perform AA on a real world dataset, motivating further research for causal effects of AA on KGE and methods for defending a KGE model.
+
+
+
+
+
+
+
 
 # Proposed Methodology
 [Cite CRIAGE] implemented a gradient based approach to calculate influence score (define influence score + purpose).  While a brute force approach can be computationally expensive, There are other approaches to this. <!-- (Insert more + cite) -->
@@ -30,7 +32,7 @@ The performance of these attacks could be measured through classification accura
 
 
 
-Bias within a dataset may focus on gender, race, sentencing, etc. We chose to focus on the sentence decided upon by the judge given the charge and guilty verdict. To determine if a judge is biased towards a charge the probability of each sentence assigned by this judge for each charge can be calculated for the entire dataset. This process should be repeated for all judges. It is vital to calculate these probabilities for the original dataset as well as the modified dataset to witness whether bias was introduced. A histogram can be created with the appropriate groupings to visually show the differences between each judge. 
+
 
 ## Expected Results
 Our proposed implementation would yield an attack on the embedding space relative to judge entities (unless this changes) .
