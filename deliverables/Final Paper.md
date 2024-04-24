@@ -6,13 +6,12 @@ Important Comment - I believe we should be measuring whether the poisoning attac
 
 
 # Introduction 
-Knowledge graphs (KGs) are multi-relational directed graphs widely used to represent knowledge in the form of triplets also known as facts. The edges within the graph represent relations between the entities or nodes they connect. KGs serve as a source of information about a particular domain. Datasets represented in KGs are accepted as truth but unfortunately they are susceptible to attacks. During the lifetime of the dataset, data can be easily added, modified, or removed without a user's awareness. One possible attack poisoning attack includes introducing bias within the dataset. Our research demonstrates the modification of the Cook County litigation dataset specifically to introduce bias into the dataset regarding the sentence decided upon by the judge given the charge and guilty verdict.
+Knowledge graphs (KGs) are multi-relational directed graphs widely used to represent knowledge in the form of triplets also known as facts. The edges within the graph represent relations between the entities or nodes they connect. KGs serve as a source of information about a particular domain. Datasets represented in KGs are commonly accepted as truth but unfortunately they are susceptible to attacks. During the lifetime of the dataset, data can be easily added, modified, or removed without a user's awareness. The user accepts the dataset as truth not knowing whether each entity and relationship is accurate, accounted for, or modified to include a bias. One possible poisoning attack includes introducing bias within the dataset. Our research demonstrates modification of the Cook County litigation dataset specifically to introduce bias into the dataset regarding the sentence decided upon by the judge given a charge and guilty verdict.
 
-KGE combine ML techniques to allow KGs with the ability to infer knowledge that are not explicitly stated in the KG.
+Within our research we chose to use the Cook County litigation dataset to demonstrate a poisoning attack. The dataset is a real, non-toy dataset therefore allowing the attack to demonstrate real world effects if a bias is successfully amplified. 
 
+The dataset schema includes relationships between 
 ## Problem Statement 
-
-
 ## State-of-the-Art Analysis/Related Work
 
 ## Research Contributions
