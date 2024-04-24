@@ -44,6 +44,7 @@ To demonstrate whether bias is introduced into the Cook County dataset after the
 ## Proposed Evaluation 
 While KGE metrics analyzes the plausibility of inferred facts and the presence of existing facts, the validation of incorrectly inferred facts can be validated with unseen valid KG facts. <!-- (This probably needs group-discussed) -->
 
+Evaluation framewoek discussed stealthiness and toxicity of attack.  TBA.
 # Conclusion
 <!-- New Hook, Summarize above sections in 1-2sentences per section, New closing remarks -->
 
