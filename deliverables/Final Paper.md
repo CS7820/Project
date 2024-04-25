@@ -43,7 +43,7 @@ Our adversarial attack will need to be coded from scratch. The strategy of the a
 Our proposed implementation would yield an attack on the embedding space relative to judge entities (unless this changes) .
 
 We would like to explore perturbed embedding space to identify if KGE models can incorrectly infer judge ruled sentencing.  This investigation hopes to understand if attacked KGE can link to causing judges to appear as sentencing towards a bias ruling. A bias ruling is understandable by analyzing similar rulings on similar cases, sometimes with differring judges. We hope to see the perturbed KG consistently inferring a judge towards sentencing more aggressive charges which have harsher jail time/death sentencing. <!-- (Smartify, include typing of entities somehow) -->
-We would meaure this be observing if the model predicts targeted sentencing with greater or lesser severity as the embeddings change.  
+We would measure this be observing if the model predicts targeted sentencing with greater or lesser severity as the embeddings change.  
 
 <!--
 ***
