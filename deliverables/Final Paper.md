@@ -12,7 +12,7 @@ While worsening a KGE model’s performance is the ideal goal of attacking the s
 
 
 ****
-MODIFICATION TO PARAGRAPH ABOVE - DELETE ONE OF THEM
+PARAGRAPH BELOW IS MODIFICATION TO PARAGRAPH ABOVE - DELETE ONE OF THEM
 ****
 While worsening a KGE model’s performance is the ideal goal of attacking the source KG, a tertiary goal from our attack is to cause the presence of social bias to become more pronounced within the perturbed knowledge graph. Our research aims to attack solely facts of the sentencing case itself, rather than the plaintiff or defendants of a cause, to demonstrate judges practicing bias towards a particular sentencing, regardless of the severity of the crime committed.
 
@@ -45,11 +45,21 @@ Our proposed implementation would yield an attack on the embedding space relativ
 We would like to explore perturbed embedding space to identify if KGE models can incorrectly infer judge ruled sentencing.  This investigation hopes to understand if attacked KGE can link to causing judges to appear as sentencing towards a bias ruling. A bias ruling is understandable by analyzing similar rulings on similar cases, sometimes with differring judges. We hope to see the perturbed KG consistently inferring a judge towards sentencing more aggressive charges which have harsher jail time/death sentencing. <!-- (Smartify, include typing of entities somehow) -->
 We would meaure this be observing if the model predicts targeted sentencing with greater or lesser severity as the embeddings change.  
 
+
+***
+DELETE PARAGRAPH ABOVE OR BELOW...WHICH ONE DO YOU LIKE?
+***
+
+
+We would like to explore perturbed embedding space to identify if KGE models can incorrectly infer judge ruled sentencing.  This investigation hopes to understand if attacked KGE can link to causing judges to appear as sentencing towards a bias ruling. To demonstrate whether bias is introduced into the Cook County knowledge graph after the poisoning attack the new knowledge graph must be compared to the initial knowledge graph. We hope to see the perturbed KG consistently inferring a judge towards sentencing more or less aggressive charges which respectively have harsher or limited jail time/death sentencing. <!-- (Smartify, include typing of entities somehow) -->
+We would meaure this by observing if the model predicts targeted sentencing with greater or lesser severity as the embeddings change.
+ 
+
+
 We would also like to identify a maximal threshold, perhaps in a percentile, of number of facts to perturb in discovering effectiveness of AA in KGE.
 <!-- (Verify if Declan does this -- if yes, toy v real data, if no, new research) -->
 
-## Results
-To demonstrate whether bias is introduced into the Cook County dataset after the poisoning attack the new dataset must be compared to the initial dataset. For each judge, the probability of each charge and the sentences assigned must be calculated. These calculations should be repeated for the modified dataset to allow the differences in the probabilities to be determined. Histograms with the proper groupings for judge, charge, and sentence can be created to visually show the difference or bias added to the dataset.
+
 
 ## Proposed Evaluation 
 While KGE metrics analyzes the plausibility of inferred facts and the presence of existing facts, the validation of incorrectly inferred facts can be validated with unseen valid KG facts. <!-- (This probably needs group-discussed) -->
