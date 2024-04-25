@@ -63,7 +63,7 @@ We would also like to identify a maximal threshold, perhaps in a percentile, of 
 ## Proposed Evaluation 
 While KGE metrics analyzes the plausibility of inferred facts and the presence of existing facts, the validation of incorrectly inferred facts can be validated with unseen valid KG facts. <!-- (This probably needs group-discussed) -->
 
-[11] introduces the notion of toxicity and stealthiness of KGE model attacks by analyzing the decreased change in MRR metrics as a reflection of the toxicity of an attack and the degree to which added poisoned triples interfere with non-targeted triples as stealthiness. These notions act as investigating starting points of analyses of our proposed implementation. 
+[11] introduces the notion of toxicity and stealthiness of KGE model attacks by analyzing the decreased change in MRR metrics as a reflection of the toxicity of an attack and the degree to which added poisoned triples interfere with non-targeted triples as stealthiness. These notions act as investigative starting points of analyses of our proposed implementation. 
 
 # Conclusion
 <!-- New Hook, Summarize above sections in 1-2sentences per section, New closing remarks -->
