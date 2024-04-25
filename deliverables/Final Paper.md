@@ -10,10 +10,12 @@ The proposed research in this paper intends to implement a poisoning attack [5] 
 
 While worsening a KGE model’s performance is the ideal goal of attacking the source KG, our research also hopes to understand whether a degree of social bias exists within the Cook County KG. While demonstrating social bias is frowned upon, the practice of bias can sometimes be present unconsciously. A tertiary goal from our attack is to cause the presence of social bias to become more pronounced. While it is unfortunate that individuals are afflicted by social bias in the court system [8], our research aims to attack solely facts of the sentencing case itself, rather than the plaintiff or defendants of a cause, to demonstrate judges practicing bias towards a particular sentencing, regardless of the severity of the crime committed.
 
+
 ****
 MODIFICATION TO PARAGRAPH ABOVE - DELETE ONE OF THEM
 ****
 While worsening a KGE model’s performance is the ideal goal of attacking the source KG, a tertiary goal from our attack is to cause the presence of social bias to become more pronounced within the perturbed knowledge graph. Our research aims to attack solely facts of the sentencing case itself, rather than the plaintiff or defendants of a cause, to demonstrate judges practicing bias towards a particular sentencing, regardless of the severity of the crime committed.
+
 
 
 The contributions to this field of research includes:
@@ -26,6 +28,11 @@ I am the related works.
 
 # Proposed Methodology
 [7] implements a gradient based approach to calculate influence score, or a metric gauging the importance of neighboring facts to the targeted fact<sup>2</sup>. While a targeted perturbation attack can have a higher likelihood of worsening the affects of a target model’s performance, we propose seeding the exploration of attacks and their effects through the implementation of semi-random selection-based attacks [9].
+
+******
+QUESTION ABOUT THE SENTENCE ABOVE REGARDING WORDING "SEMI-RANDOM" -  IS THE ATTACK TARGETTED IF WE ARE TRYING TO ADD BIAS(ATTACKING FACTS ABOUT THE SENTENCING)?
+******
+
 
 As our research intends to target the judge and their ruling over a case, we propose improving the computational complexity of our attack by reducing the search space of our attack by beginning our perturbation of facts with facts related to judge entities in our KG. We will implement a breadth-first search (BFS) [10] from the judge entities to gain a better understanding of neighboring relations and entities. The result of BFS will provide a tree-representation of facts and their distance away from the root fact (the root node can be represented as the judge's entity typing), represented by the tree’s depth levels. This will allow for the experiment to explore both an attack on direct relations from the judge entities (where the depth level is closer to 0) and on indirect relations from the judge entities (where the depth level is farther from 0).
 
