@@ -1,17 +1,20 @@
-# Adversarial Attacks on Cook County Sentencing Dataset
+# Adversarial Attacks on Cook County Litigation Dataset
 Author(s): Brandon Dave, Calvin Greenewald, Stacie Severyn
-
-### Author notes (to be deleted)
-Important Comment - I believe we should be measuring whether the poisoning attack introduces bias into the dataset. This requires calculations of the inital dataset to be compared to the modified dataset. For the poisoning attack to introduce bias the probabilities of the intial dataset will be much different from the modified dataset for the bias.
 
 # Introduction
 Knowledge graphs (KGs) are multi-relational directed graphs widely used to represent knowledge in the form of triplets (or facts) and act as a source of information (or knowledge) based on the domain to which they represent [1]. Graph nodes and edges are respectively implemented as entities and relations between entities.
 
 Datasets represented in KGs are commonly accepted as truth, but, unfortunately, they are susceptible to attacks [2, 3]. These attacks, perturbing facts of a KG, can appear as easily adding, modifying, or removing facts without a user’s awareness. A current research in KG application includes the combination of semantic tools (KGs) and machine learning techniques to train Knowledge Graph Embedding (KGE) models. While new information (or facts of a KG) can be inferred by domain experts, KGE models allow for machines to attain the ability to learn and evaluate the likelihood of a fact’s existence provided the KG as a source of training data [4], otherwise simply known as Knowledge Graph Completion (KGC). There exists research that reveals that a perturbed KG does indeed worsen KGE model performances (or their ability to perform KGC tasks) [5,6,7].
 
-The proposed research in this paper intends to implement a poisoning attack [5] on a realworld dataset transformed to a KG, originating from the Cook County Sentencing data<sup>1</sup>. Similar to other research, we expect implementing perturbed facts to the KG will worsen KGC tasks. Whereas a benchmark KG, used in research in this field, can be demonstrated as a toy dataset, or a dataset designed to be manipulated and studied, our implementation of a real-world KG motivates additional research to promote security measures in defending publicly available KGs. Our newly created KG (unaffected by attacks) will serve as the baseline to evaluate against with the perturbed KG.
+The proposed research in this paper intends to implement a poisoning attack [5] on a real-world dataset transformed to a KG, originating from the Cook County Sentencing data<sup>1</sup>. Similar to other research, we expect implementing perturbed facts to the KG will worsen KGC tasks. Whereas a benchmark KG, used in research in this field, can be demonstrated as a toy dataset, or a dataset designed to be manipulated and studied, our implementation of a real-world KG motivates additional research to promote security measures in defending publicly available KGs. Our newly created KG (unaffected by attacks) will serve as the baseline to evaluate against with the perturbed KG.
 
 While worsening a KGE model’s performance is the ideal goal of attacking the source KG, our research also hopes to understand whether a degree of social bias exists within the Cook County KG. While demonstrating social bias is frowned upon, the practice of bias can sometimes be present unconsciously. A tertiary goal from our attack is to cause the presence of social bias to become more pronounced. While it is unfortunate that individuals are afflicted by social bias in the court system [8], our research aims to attack solely facts of the sentencing case itself, rather than the plaintiff or defendants of a cause, to demonstrate judges practicing bias towards a particular sentencing, regardless of the severity of the crime committed.
+
+****
+MODIFICATION TO PARAGRAPH ABOVE - DELETE ONE OF THEM
+****
+While worsening a KGE model’s performance is the ideal goal of attacking the source KG, a tertiary goal from our attack is to cause the presence of social bias to become more pronounced within the perturbed knowledge graph. Our research aims to attack solely facts of the sentencing case itself, rather than the plaintiff or defendants of a cause, to demonstrate judges practicing bias towards a particular sentencing, regardless of the severity of the crime committed.
+
 
 The contributions to this field of research includes:
 1. The formation of the Cook County Sentencing data as a KG.
