@@ -51,8 +51,8 @@ DELETE PARAGRAPH ABOVE OR BELOW...WHICH ONE DO YOU LIKE?
 ***
 
 
-We would like to explore perturbed embedding space to identify if KGE models can incorrectly infer judge ruled sentencing.  This investigation hopes to understand if attacked KGE can link to causing judges to appear as sentencing towards a bias ruling. To demonstrate whether bias is introduced into the Cook County knowledge graph after the poisoning attack the new knowledge graph must be compared to the initial knowledge graph. We hope to see the perturbed KG consistently inferring a judge towards sentencing more or less aggressive charges which respectively have harsher or limited jail time/death sentencing. <!-- (Smartify, include typing of entities somehow) -->
-We would meaure this by observing if the model predicts targeted sentencing with greater or lesser severity as the embeddings change.
+We would like to explore perturbed embedding space to identify if KGE models can incorrectly infer judge ruled sentencing.  This investigation hopes to understand if attacked KGE can link to causing judges to appear as sentencing towards a bias ruling. We hope to see the perturbed KG consistently inferring a judge towards sentencing more or less aggressive charges which respectively have harsher or limited jail time/death sentencing. <!-- (Smartify, include typing of entities somehow) -->
+We would measure this by observing if the model predicts targeted sentencing with greater or lesser severity as the embeddings change.
  
 
 
