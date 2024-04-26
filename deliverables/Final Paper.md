@@ -42,10 +42,7 @@ Our adversarial attack will need to be coded from scratch. The strategy of the a
 Through a semi-random means, we adjusted the sentencing terms of individuals to create judge sentencing bias on targeted triples. Bias, in this case, refers to intentional or accidental unjustified variations in a judge's sentencing. It manifests as noticably different sentencing for individuals involved in similar crimes. There are few different methods we expect to take to measure the added bias. Firstly, we can determine if triples are outliers when compared to all others, this can be done by calculating the mean sentencing lenghts and identifying if there are outliers. Or, we can analyze prediction probabilities from a trained machine learning model to determine if the probabilities are significantly altered after an attack. 
 
 ## Expected Results
-Our proposed implementation would yield an attack on the embedding space relative to judge entities (unless this changes) .
-
-We would like to explore perturbed embedding space to identify if KGE models can incorrectly infer judge ruled sentencing.  This investigation hopes to understand if attacked KGE can link to causing judges to appear as sentencing towards a bias ruling. A bias ruling is understandable by analyzing similar rulings on similar cases, sometimes with differring judges. We hope to see the perturbed KG consistently inferring a judge towards sentencing more aggressive charges which have harsher jail time/death sentencing. <!-- (Smartify, include typing of entities somehow) -->
-We would measure this be observing if the model predicts targeted sentencing with greater or lesser severity as the embeddings change.  
+Our proposed implementation would yield an attack on the embedding space relative to judge and sentencing entities. We would like to explore the perturbed embedding space to identify if KGE models can incorrectly infer judge ruled sentencing.  This investigation hopes to understand if attacked KGE models can infer links between judges and sentencing to appear as sentencing towards a bias ruling. A bias ruling is understandable by analyzing similar rulings on similar cases, sometimes with differring judges. We hope to see the perturbed KG consistently inferring a judge towards sentencing more aggressive charges which have harsher jail time/death sentencing. We would measure this by observing the models' predictions resulting in targeted sentencens that are  greater or lesser in severity when cross examined with similar cases and their ruled sentencing.  
 
 <!--
 ***
@@ -55,11 +52,7 @@ DELETE PARAGRAPH ABOVE OR BELOW...WHICH ONE DO YOU LIKE?
 We would like to explore perturbed embedding space to identify if KGE models can incorrectly infer judge ruled sentencing.  This investigation hopes to understand if attacked KGE can link to causing judges to appear as sentencing towards a bias ruling. We hope to see the perturbed KG consistently inferring a judge towards sentencing more or less aggressive charges which respectively have harsher or limited jail time/death sentencing. <!-- (Smartify, include typing of entities somehow) --#>
 -->
 
-We would measure this by observing if the model predicts targeted sentencing with greater or lesser severity as the embeddings change.
- 
-
-
-We would also like to identify a maximal threshold, perhaps in a percentile, of number of facts to perturb in discovering effectiveness of AA in KGE.
+We would also like to identify a maximal threshold, perhaps as a ratio between perturbed and actual facts, in discovering effectiveness of attacks against KGE models.
 <!-- (Verify if Declan does this -- if yes, toy v real data, if no, new research) -->
 
 ## Proposed Evaluation 
